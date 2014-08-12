@@ -3,28 +3,41 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'pg' # Postgres Database
+gem 'haml' # Faster HTML
+gem 'haml-rails' # Generate HAML template
+gem 'hirb' # Console beatification
+gem 'bootstrap-sass' # Twitter Bootstrap
+gem 'jquery-rails' # jQuery
+gem 'font-awesome-rails' # Font Awesome
+gem 'sass-rails', '~> 4.0.3' # Sass Support
+gem 'uglifier', '>= 1.3.0' # JS Compression
+gem 'turbolinks' # Push state content
+gem 'jbuilder', '~> 2.0' # Build JSON APIs
+gem 'devise'
+gem 'pry'
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+group :development, :test do
+  gem 'better_errors' # Ruby errors
+  gem 'binding_of_caller' # Deeper errors
+  gem 'rails-erd' # Visualize models
+  gem 'guard' # Watch project directory
+  gem 'guard-livereload' # Reload page on save
+  gem 'guard-rspec' # Run specs on save
+  gem 'spring' # Keeps Rails running
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara' # Simulate user
+  gem 'factory_girl_rails' # Make re-usable objects quickly, like users
+end
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+group :doc do
+  gem 'sdoc', '0.4.0', require: false
+end
+
+group :production do
+  gem 'heroku-deflater' # Gzip static files
+  gem 'rails_12factor' # Heroku plugins
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

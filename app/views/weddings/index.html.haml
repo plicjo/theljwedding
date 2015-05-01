@@ -1,0 +1,620 @@
+#loading-wrap
+  #loading
+    %i.fa.fa-spinner.fa.fa-spin
+%header#home.home-video
+  / Full Screen Video
+  #P3.player.video-container{"data-property" => "{videoURL:'C7UwCx4qp-4',containment:'.home-video',autoPlay:true, mute:true, startAt:5, opacity:1}"}
+  / End Video
+  .container
+    .row
+      .col-md-12
+        .circle
+          .table-cell
+            %h1.fittext1 Lauren & Jordan
+            / Change for your names
+            %h2.fittext2 Wedding
+            / Your own slogan here
+            %h3.fittext3 8.8.2015
+            / Your own slogan here
+  .navbar
+    .navbar-inner
+      .container
+        %ul.nav
+          %li
+            %a{:href => "#home", :title => "Home"}
+              %i.fa.fa-home
+          %li
+            %a{:href => "#about", :title => "About"}
+              %i.fa.fa-heart
+          %li
+            %a{:href => "#location", :title => "Location"}
+              %i.fa.fa-map-marker
+          %li
+            %a{:href => "#gifts", :title => "Gifts"}
+              %i.fa.fa-gift
+          %li
+            %a{:href => "#tableware", :title => "Tableware"}
+              %i.fa.fa-cutlery
+          %li
+            %a{:href => "#gallery", :title => "Gallery"}
+              %i.fa.fa-camera-retro
+          %li
+            %a{:href => "#blog", :title => "Blog"}
+              %i.fa.fa-pencil
+          %li
+            %a{:href => "#contact", :title => "Contact"}
+              %i.fa.fa-comment
+        %select.select-menu
+/ Slider
+.slider1.flexslider
+  %ul.slides
+    %li
+      .slides-top.square
+        = link_to asset_url('300x200-1.jpg'), data: {rel: 'prettyPhoto[00]'} do 
+          = image_tag "300x200-1.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-2.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-2.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-3.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-3.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-4.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-4.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-5.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-5.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-6.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-7.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-8.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-8.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-9.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-9.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-10.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-10.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-11.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-11.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-12.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-12.jpg"
+    %li
+      .slides-top.square
+        = link_to asset_url("300x200-13.jpg"), data: {rel: 'prettyPhoto[00]'}  do
+          = image_tag "300x200-13.jpg"
+/ Slider End
+/ ABOUT
+%section#about
+  .container
+    .row
+      / /.col-md-4
+      .col-md-4
+        %h1 Lauren Olsen
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          = image_tag "signature-2.png", class: 'pull-right signature'
+      / /.col-md-4
+      .col-md-4.animated{"data-type" => "bounceIn"}
+        = link_to asset_url('1.jpg'), data: {rel: 'prettyPhoto[1]'} do 
+          .square-all
+            .img-container
+              = image_tag "1.jpg", class: 'img-circle'
+              .about-icon
+        = link_to asset_url('about.jpg'), '', data: {rel: 'prettyPhoto[1]'}, class: 'none'
+        = link_to asset_url('about-2.jpg'), '', data: {rel: 'prettyPhoto[1]'}, class: 'none'
+      .col-md-4
+        %h1 Jordan Harirchi
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          = image_tag 'signature-1.png', class: 'pull-right signature'
+      / /.col-md-4
+    / /.row
+  / /.container
+/ ABOUT ENDS
+/ LOCATION
+%section#location
+  .container
+    .row
+      .col-md-4
+        %h2 Ceremony Location
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          = link_to "http://www.example.com/", "http://www.example.com/"
+      .col-md-4.animated{"data-type" => "bounceIn"}
+        = link_to asset_url('2.jpg'), data: { rel:'prettyPhoto[2]'} do
+          .square-all
+            .img-container
+              = image_tag '2.jpg', class: 'img-circle'
+              .location-icon
+        = link_to asset_url('location.jpg'), '', data: {rel: 'prettyPhoto[2]'}, class: 'none'
+        = link_to asset_url('location-2.jpg'), '', data: {rel: 'prettyPhoto[2]'}, class: 'none'
+      .col-md-4
+        %h2 Accommodation
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %strong Click on image for photos of accommodation
+    / /.row
+    .row
+      .col-md-4
+        %h2 Navigation
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel
+      .col-md-4
+        = link_to "https://maps.google.com/?ie=UTF8&t=m&ll=38.77841,-104.778929&spn=0.007695,0.009828&z=15&output=embed" do
+          = image_tag 'google_map.png', class: 'img-210'
+      .col-md-4
+        %h2 Reservation
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          = link_to 'http://www.example.com'
+%section#gifts
+  .container
+    .row
+      .col-md-4
+        %h2 We love wedding gifts :)
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      .col-md-4.animated{"data-type" => "bounceIn"}
+        = link_to asset_url('3.jpg'), data: {rel: 'prettyPhoto[3]'} do
+          .square-all
+            .img-container
+              = image_tag '3.jpg', class: 'img-circle'
+              .gifts-icon
+        = link_to asset_url('gifts.jpg'), '', data: {rel: 'prettyPhoto[3]'}, class: 'none'
+        = link_to asset_url('gifts-2.jpg'), '', data: {rel: 'prettyPhoto[3]'}, class: 'none'
+      .col-md-4
+        %h2 What we really need
+        %ul.list
+          %li
+            %i.fa.fa-ok>
+            \    Le Aorem Ipsum ainsi obtenu ne seeng elit.
+          %li
+            %i.fa.fa-ok>
+            \    Le Aorem Ipsum ainsi obtenu ne seeng elit.
+          %li
+            %i.fa.fa-ok>
+            \    Le Aorem Ipsum ainsi obtenu ne seeng elit.
+          %li
+            %i.fa.fa-ok>
+            \    Le Aorem Ipsum ainsi obtenu ne seeng elit.
+          %li
+            %i.fa.fa-ok>
+            \    Le Aorem Ipsum ainsi obtenu ne seeng elit.
+          %li
+            %i.fa.fa-remove>
+            \    Le Aorem Ipsum ainsi obtenu ne seeng elit.
+          %li
+            %i.fa.fa-remove>
+            \    Le Aorem Ipsum ainsi obtenu ne seeng elit.
+    .row
+      .col-md-4
+        %h2 About our honeymoon
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+      .col-md-4
+        = link_to asset_url('3-1.jpg'), data: { rel:'prettyPhoto[honeymoon]'} do
+          = image_tag '3-1.jpg', class: 'img-circle img-210'
+        = link_to 'honeymoon.jpg', '', data: { rel: 'prettyPhoto[honeymoon]'}, class: 'none'
+      .col-md-4
+        %h2 Honeymoon destination
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+  / /.container
+/ GIFTS END
+/ TABLEWARE
+%section#tableware
+  .container
+    .row
+      .col-md-4
+        %h2 Wedding tableware
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      / /.col-md-4
+      .col-md-4
+        = link_to asset_url('4.jpg'), data: { rel:'prettyPhoto[4]'} do
+          .square-all
+            .img-container
+              = image_tag '4.jpg', class: 'img-circle'
+              .tableware-icon
+        = link_to asset_url('tableware.jpg'), '', data: { rel:'prettyPhoto[4]'}, class: 'none'
+        = link_to asset_url('tableware-2.jpg'), '', data: { rel:'prettyPhoto[4]'}, class: 'none'
+      / /.col-md-4
+      .col-md-4
+        %h2 Several possibilities
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %strong Click on image for some auxiliary pictures
+      / /.col-md-4
+    / /.row
+  / /.container
+/ TABLEWARE ENDS
+/ GALLERY
+%section#gallery
+  / Slider
+  .flexslider
+    %ul.slides
+      / PORTFOLIO 1st page
+      %li
+        / PORTFOLIO BIG IMAGES -two-
+        .portfolio-big.square
+          = link_to asset_url("960-1.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "960-1.jpg"
+        .portfolio-big.square
+          = link_to asset_url("960-2.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "960-2.jpg"
+        / PORTFOLIO MEDIUM IMAGES -four-
+        .portfolio.square
+          = link_to asset_url("480-1.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "480-1.jpg"
+        .portfolio.square
+          = link_to asset_url("480-2.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "480-2.jpg"
+        .portfolio.square
+          = link_to asset_url("480-3.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "480-3.jpg"
+        .portfolio.square
+          = link_to asset_url("480-4.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "480-4.jpg"
+        / PORTFOLIO SMALL IMAGES -eight-
+        .portfolio-small.square
+          = link_to asset_url("240-1.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "240-1.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-2.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "240-2.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-3.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "240-3.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-4.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "240-4.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-5.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "240-5.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-6.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "240-6.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-7.jpg"), data: {rel: "prettyPhoto[11]"} do
+            = image_tag "240-7.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-8.jpg"), data: {rel: "gallery2"} do
+            = image_tag "240-8.jpg"
+      / <li> ENDS
+      / PORTFOLIO 1st page ENDS
+      / PORTFOLIO 2nd page
+      %li
+        / PORTFOLIO BIG IMAGES -two-
+        .portfolio-big.square
+          = link_to asset_url("960-1.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "960-1.jpg"
+        .portfolio-big.square
+          = link_to asset_url("960-2.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "960-2.jpg"
+        / PORTFOLIO MEDIUM IMAGES -four-
+        .portfolio.square
+          = link_to asset_url("480-1.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-1.jpg"
+        .portfolio.square
+          = link_to asset_url("480-2.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-2.jpg"
+        .portfolio.square
+          = link_to asset_url("480-3.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-3.jpg"
+        .portfolio.square
+          = link_to asset_url("480-4.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-4.jpg"
+        / PORTFOLIO SMALL IMAGES -eight-
+        .portfolio-small.square
+          = link_to asset_url("240-1.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-1.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-2.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-2.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-3.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-3.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-4.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-4.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-5.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-5.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-6.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-6.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-7.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-7.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-8.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-8.jpg"
+      / <li> ENDS
+      / PORTFOLIO 2nd page ENDS
+      / PORTFOLIO 3rd page
+      %li
+        / PORTFOLIO BIG IMAGES -two-
+        .portfolio-big.square
+          = link_to asset_url("960-1.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "960-1.jpg"
+        .portfolio-big.square
+          = link_to asset_url("960-2.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "960-2.jpg"
+        / PORTFOLIO MEDIUM IMAGES -four-
+        .portfolio.square
+          = link_to asset_url("480-1.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-1.jpg"
+        .portfolio.square
+          = link_to asset_url("480-2.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-2.jpg"
+        .portfolio.square
+          = link_to asset_url("480-3.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-3.jpg"
+        .portfolio.square
+          = link_to asset_url("480-4.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "480-4.jpg"
+        / PORTFOLIO SMALL IMAGES -eight-
+        .portfolio-small.square
+          = link_to asset_url("240-1.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-1.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-2.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-2.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-3.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-3.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-4.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-4.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-5.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-5.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-6.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-6.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-7.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-7.jpg"
+        .portfolio-small.square
+          = link_to asset_url("240-8.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "240-8.jpg"
+      / <li> ENDS
+      / PORTFOLIO 3rd page ENDS
+  / Slider End
+/ GALLERY ENDS
+/ BLOG SECTION
+%section#blog
+  .container
+    .row
+      .col-md-12
+        %h1.blog-title Our wedding blog.
+    .row
+      .owl-carousel.carousel-top-navigation
+        / blog item inside carousel
+        .item
+          .blog-container
+            = image_tag '960-1.jpg'
+            / blog img
+            .blog-text
+              %h4 Image post
+              / blog post
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Wordpress
+              / blogp ost date, user, category
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              / blog post extract
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+            / blog text ends
+          / blog container ends
+        / blog item inside carousel ends
+        .item
+          .blog-container
+            = image_tag '960-2.jpg'
+            .blog-text
+              %h4 Text post
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Html 5
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+        .item
+          .blog-container
+            = image_tag '960-1.jpg'
+            .blog-text
+              %h4 Video post
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Youtube
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+        .item
+          .blog-container
+            = image_tag '960-2.jpg'
+            .blog-text
+              %h4 Post title 4
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Html 5
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+        .item
+          .blog-container
+            = image_tag '960-1.jpg'
+            .blog-text
+              %h4 Post title 5
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Wordpress
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+        .item
+          .blog-container
+            = image_tag '960-2.jpg'
+            .blog-text
+              %h4 Post title 6
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Drupal
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+        .item
+          .blog-container
+            = image_tag '960-1.jpg'
+            .blog-text
+              %h4 Post title 7
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Art
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+        .item
+          .blog-container
+            = image_tag '960-2.jpg'
+            .blog-text
+              %h4 Post title title 8
+              %h6
+                26.06.2013 - Anthony in
+                %a{:href => "#"} Music
+              %p Sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas...
+              %a{:href => "blog-detail.html", :rel => "external"}
+                %i.fa.fa-book
+                Read more
+              / link to blog post
+/ COMMENTS
+%section#contact
+  .container
+    .row
+      .col-md-4
+        %h2 We would love to read your comments
+        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      / /.col-md-4
+      .col-md-4
+        = link_to asset_url('5.jpg'), data: {rel: 'prettyPhoto[5]'} do
+          .square-all
+            .img-container
+              = image_tag '5.jpg', class: 'img-circle'
+              .comments-icon
+        = link_to asset_url('contact.jpg'), data: {rel: 'prettyPhoto[00]'}, class: 'none'
+        .spacer35
+      / /.col-md-4
+      .col-md-4
+        %h2 Top comment
+        %p.comment-title-top Author: Angelika & Thomas
+        %p.comment Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+      / /.col-md-4
+    / /.row
+    .row.spacer35
+    .row
+      .col-md-6
+        / FORM
+        %h2 Form
+        %form#ajax-form.form-main{:action => "#", :method => "post", :name => "ajax-form"}
+          .commnet-form
+            %input#name{:name => "name", :placeholder => "Name *", :type => "text"}/
+            %input#email{:name => "email", :placeholder => "E-mail *", :type => "text"}/
+            %textarea#message{:name => "message", :placeholder => "Message *"}
+          .row
+            .col-md-12
+              %p.submit
+                Thank you for your comment!
+                %button.send-button{:type => "button"}
+                  %i.fa.fa-check
+        / FORM END
+        %h2 Socials
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        .spacer35
+        / SOCIAL ICONS
+        %a.social-network.animated{"data-type" => "bounceIn", :href => "#", :title => "facebook"}
+          %i.fa.fa-facebook
+        %a.social-network.animated{"data-type" => "bounceIn", :href => "#", :title => "twitter"}
+          %i.fa.fa-twitter
+        %a.social-network.animated{"data-type" => "bounceIn", :href => "#", :title => "google+"}
+          %i.fa.fa-google-plus
+        %a.social-network.animated{"data-type" => "bounceIn", :href => "#", :title => "youtube"}
+          %i.fa.fa-youtube
+        / SOCIAL ICONS END to remove animation from them just remove animated and data-type
+        .spacer35
+      / /.col-md-6
+      / COMMENTS + COMMENTS SLIDER
+      .col-md-6
+        .bottom-nav-content-slider
+          %ul.slides
+            %li
+              / COMMENTS INSIDE <li></li>
+              %h2 All comments
+              %p.comment-title-top Author: Jan & Andrea
+              %p.comment Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %hr/
+              %p.comment-title Author: Mom & Dad
+              %p.comment Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %hr/
+              %p.comment-title Author: Angelika & Thomas
+              %p.comment Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %hr/
+            / END 1st page of comments
+            %li
+              / 2nd page of comments
+              %h2 All comments
+              %p.comment-title-top Author: Jan & Andrea
+              %p.comment Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %hr/
+              %p.comment-title Author: Mom & Dad
+              %p.comment Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %hr/
+              %p.comment-title Author: Angelika & Thomas 2
+              %p.comment Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+              %hr/
+            / END 2nd page of comments
+    / /.row
+  / /.container
+/ FOOTER

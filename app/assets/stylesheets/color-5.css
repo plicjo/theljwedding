@@ -1,0 +1,13 @@
+h1, h2, h3, h4, h5, h6, a, a:focus, .submit, #portfolio-filter li.act a, #portfolio-filter li:hover a {
+  color: #3C70B8;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .square-all, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active, .circle-2, .send-button:hover, .square, .center-nav-content-slider .flex-direction-nav a, a.social-network:hover, .bottom-nav-content-slider .flex-direction-nav a, .owl-theme .owl-controlls .owl-buttons div, .btn:hover, .btn:active, .btn:focus, #loading-wrap, .slides-navigation a  {
+  background-color: #3C70B8;
+  background-color: rgba(60,112,184,1); 
+}
+
+.circle {
+  background-color: #3C70B8;
+  background-color: rgba(60,112,184,0.5);
+}  

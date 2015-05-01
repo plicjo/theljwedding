@@ -1,53 +1,63 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
-gem 'pg' # Postgres Database
-gem 'haml' # Faster HTML
-gem 'haml-rails' # Generate HAML template
-gem 'hirb' # Console beatification
-gem 'bootstrap-sass' # Twitter Bootstrap
-gem 'jquery-rails' # jQuery
-gem 'font-awesome-rails' # Font Awesome
-gem 'sass-rails', '~> 4.0.3' # Sass Support
-gem 'uglifier', '>= 1.3.0' # JS Compression
-gem 'turbolinks' # Push state content
-gem 'jbuilder', '~> 2.0' # Build JSON APIs
-gem 'devise'
-gem 'pry'
+gem 'rails', '4.2.1'
+gem 'passenger'                # Web Server
+gem 'pg'                       # Postgres Database
+gem 'bcrypt'                   # Encryption
+gem 'coffee-rails', '~> 4.1.0' # CoffeeScript
+gem 'figaro'                   # Environment Variables
+gem 'font-awesome-rails'       # Font Awesome
+gem 'haml-rails'               # HTML Preprocessor
+gem 'hirb'                     # Pretty console
+gem 'redis'                    # Key-Value store server for background jobs
+gem 'refile'                   # File Uploads
+gem 'responders'               # Clean controllers
+gem 'sass-rails', '~> 5.0'     # SASS
+gem 'sidekiq'                  # Background Job Queue
+gem 'simple_form'              # Form generator
+gem 'uglifier', '>= 1.3.0'     # JS Compression
+gem 'will_paginate'            # Pagination
+gem 'will_paginate-bootstrap'  # Bootstrap styles for pagination
 
 group :development, :test do
-  gem 'better_errors' # Ruby errors
-  gem 'binding_of_caller' # Deeper errors
-  gem 'rails-erd' # Visualize models
-  gem 'guard' # Watch project directory
-  gem 'guard-livereload' # Reload page on save
-  gem 'guard-rspec' # Run specs on save
-  gem 'spring' # Keeps Rails running
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara' # Simulate user
-  gem 'factory_girl_rails' # Make re-usable objects quickly, like users
+  gem 'pry'                      # Code debugger
+  gem 'spring'                   # Fast Application loading
+  gem 'spring-commands-cucumber' # Spring for Cucumber
+  gem 'spring-commands-rspec'    # Spring for RSpec
+  gem 'faker'                    # Fake data
 end
 
-group :doc do
-  gem 'sdoc', '0.4.0', require: false
+group :development do
+  gem 'annotate'
+  gem 'better_errors'            # Better Ruby errors
+  gem 'binding_of_caller'
+  gem 'byebug'
+  gem 'quiet_assets'             # Mute assets in Rails server
+end
+
+group :test do
+  gem 'capybara'                       # Simulate user
+  gem 'poltergeist'                    # Simulate browser JS
+  gem 'cucumber-rails', require: false # Acceptance tests
+  gem 'database_cleaner'               # Clean test db
+  gem 'factory_girl_rails'             # Factories for tests
+  gem 'guard'                          # Watch project directory
+  gem 'guard-livereload'               # Reload page on save
+  gem 'guard-cucumber'                 # Run features on save
+  gem 'guard-rspec'                    # Run specs on save
+  gem 'launchy'                        # Launch browser on test failure
+  gem 'rspec-rails'                    # Functional tests
+  gem 'simplecov'                      # See test coverage
+  gem 'shoulda-matchers'               # Quick test writing
+  gem 'shoulda-callback-matchers', '~> 1.1.1' # Rspec callback matchers
+  gem 'webmock'                        # Fake HTTP Requests
 end
 
 group :production do
   gem 'heroku-deflater' # Gzip static files
-  gem 'rails_12factor' # Heroku plugins
+  gem 'rails_12factor'  # Heroku plugins
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+gem 'sdoc', '~> 0.4.0', group: :doc

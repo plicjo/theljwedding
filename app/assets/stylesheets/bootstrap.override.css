@@ -1,0 +1,187 @@
+
+@media (max-width: 992px) {
+  .navbar .nav{
+    display:none !important;
+  }
+  .select-menu {
+    font-family: "Open Sans",Arial,sans-serif;
+    margin-top:0px;
+    width:220px;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #7A828B;
+    color: #7A828B;
+    display: inline-block;
+    font-size: 14px;
+    font-weight:500;
+    padding:10px 10px;
+    height:45px;
+  }
+ 
+ .color-picker {
+  display: none; 
+}
+
+.navbar-inner {
+  min-height: 60px;  
+ }
+ 
+ .home-img, .home-video, .home-parallax{
+  max-height: 480px;
+  min-height:480px;
+}
+
+section {
+  margin: 0;
+  padding: 60px 0px;
+}
+    
+}
+
+/**  Bootstrap overide  768px **/
+
+@media (max-width: 768px) {
+  body {
+    padding-right: 0px;
+    padding-left: 0px;
+  }  
+
+
+  .spacer160 {
+    height:140px !important;
+  }
+    .spacer35 {
+    height:20px !important;
+  }
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }  
+  .flex-control-paging li a {width: 13px; height: 13px; display: block; background: #d4d2da; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 13px; -o-border-radius: 13px; border-radius: 13px; box-shadow: inset 0 0 0px rgba(0,0,0,0.3);}
+  
+  .square-all {
+    margin-bottom:15px;
+  }  
+
+} 
+
+
+/**  Bootstrap overide  568px **/
+
+@media (max-width: 568px) {
+  .spacer160 {
+    height:115px !important;
+  }
+    .spacer35 {
+    height:20px !important;
+  }
+
+  .blog-comment-2 {
+  margin-left:0px;
+}
+.blog-comment-3 {
+  margin-left:0px;
+}
+.blog-comment-4 {
+  margin-left:0px;
+}
+  
+   
+}
+
+/**  Bootstrap overide  480px **/
+
+@media (max-width: 480px) {
+  .flex-control-nav {
+    bottom: -33px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .spacer160 {
+    height:110px !important;
+  }
+    .spacer35 {
+    height:20px !important;
+  }
+  .flexslider {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 solid #FFFFFF;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    margin: 0 0 30px;
+    position: relative;
+  }
+   .flex-control-paging li a {width: 12px; height: 12px; display: block; background: #d4d2da; cursor: pointer; text-indent: -9999px; -webkit-border-radius: 12px; -moz-border-radius: 12px; -o-border-radius: 12px; border-radius: 12px; box-shadow: inset 0 0 0px rgba(0,0,0,0.3);}
+    
+.circle, .circle-2 {
+  width: 300px;
+  height: 300px;
+} 
+.home-img, .home-video, .home-parallax{
+  max-height: 410px;
+  min-height:410px;
+}
+   
+}
+
+/**  Bootstrap overide  380px **/
+
+@media (max-width: 380px) {
+  .spacer160 {
+    height:100px !important;
+  }
+    .spacer35 {
+    height:5px !important;
+  }
+.circle, .circle-2 {
+  width: 250px;
+  height: 250px;
+}
+
+.home-img, .home-video, .home-parallax{
+  max-height: 360px;
+  min-height:360px;
+}   
+  
+}
+
+/**  Bootstrap overide  320px **/
+
+@media (max-width: 320px) {
+  .flex-control-nav {
+    bottom: -33px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .spacer160 {
+    height:105px !important;
+  }
+    .spacer35 {
+    height:10px !important;
+  }
+  
+ .circle, .circle-2 {
+  width: 200px;
+  height: 200px;
+}
+
+.home-img, .home-video, .home-parallax{
+  max-height: 300px;
+  min-height:300px;
+} 
+  
+}
+
+/**  Bootstrap overide  240px **/
+
+@media (max-width: 240px) {
+  .spacer160 {
+    height:110px !important;
+  }
+    .spacer35 {
+    height:5px !important;
+  }
+ 
+   
+}

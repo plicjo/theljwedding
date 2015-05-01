@@ -10,6 +10,18 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap.min
+ *= require animate
+ *= require flexslider
+ *= require prettyPhoto 
+ *= require font-awesome
+ *= require YTPlayer
+ *= require owl.carousel
+ *= require style
+ *= require components
+ *= require color-1.css
+ *= require style.css
+ *= require bootstrap.override
  *= require_tree .
  *= require_self
  */

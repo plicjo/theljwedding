@@ -60,6 +60,7 @@ group :test do
   gem 'shoulda-matchers'               # Quick test writing
   gem 'shoulda-callback-matchers', '~> 1.1.1' # Rspec callback matchers
   gem 'webmock'                        # Fake HTTP Requests
+  gem 'vcr'                            # Replay requests
 end
 
 group :production do

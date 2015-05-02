@@ -15,16 +15,11 @@ When(/^I click "(.*?)"$/) do |text|
   click_link_or_button "#{text}"
 end
 
-When(/^the user updates the wedding info$/) do
-  fill_in 'wedding_location', with: '21 W Church St Jacksonville, FL'
-  click_button 'Update Wedding'
-end
-
 Then(/^I should see "(.*?)"$/) do |text|
   page.should have_content "#{text}"
 end
 
 When(/^I update the wedding info$/) do
-  fill_in 'wedding_location', with: '21 W Church St Jacksonville, FL'
+  fill_in 'autocomplete', with: '21 W Church St Jacksonville, FL'
   click_button 'Update Wedding'
 end

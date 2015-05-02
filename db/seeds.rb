@@ -5,3 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Wedding.create(location: "Jacksonville, FL", time: "2015-08-08 21:23:48") unless Wedding.count > 0

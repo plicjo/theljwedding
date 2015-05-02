@@ -12,8 +12,11 @@ Rails.application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
+  # Run tests in random order
+  config.active_support.test_order = :random
+
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_assets  = true
+  config.serve_static_files  = true
   config.static_cache_control = 'public, max-age=3600'
 
   # Show full error reports and disable caching.
@@ -36,4 +39,13 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  require 'capybara/poltergeist'
+  Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, :js_errors => false)
+  end
+
+  Capybara.ignore_hidden_elements = false
+  Capybara.default_driver       = :rack_test
+  Capybara.javascript_driver    = :poltergeist
+  Capybara.default_wait_time    = 6
 end

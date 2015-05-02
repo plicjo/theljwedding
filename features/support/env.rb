@@ -28,6 +28,9 @@ require 'cucumber/rails'
 #
 ActionController::Base.allow_rescue = false
 
+# Easy Factory Girl syntax usage
+World(FactoryGirl::Syntax::Methods)
+
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin

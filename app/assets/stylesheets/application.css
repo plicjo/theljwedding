@@ -22,6 +22,10 @@
  *= require color-1.css
  *= require style.css
  *= require bootstrap.override
+ *= require jquery-ui
+ *= require flashes
+ *= require variables
+ *= require convenience
  *= require_tree .
  *= require_self
  */

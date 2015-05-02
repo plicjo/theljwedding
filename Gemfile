@@ -5,18 +5,25 @@ ruby '2.2.2'
 gem 'rails', '4.2.1'
 gem 'passenger'                # Web Server
 gem 'pg'                       # Postgres Database
+
 gem 'bcrypt'                   # Encryption
 gem 'coffee-rails', '~> 4.1.0' # CoffeeScript
+gem 'devise'                   # Authentication
 gem 'figaro'                   # Environment Variables
 gem 'font-awesome-rails'       # Font Awesome
+gem 'gmaps-autocomplete-rails' # GMaps Autocomplete Fields
 gem 'haml-rails'               # HTML Preprocessor
 gem 'hirb'                     # Pretty console
+gem 'jquery-rails'             # jQuery
+gem 'jquery-turbolinks'        # Integrate Turbolinks with jQuery better
+gem 'jquery-ui-rails'          # jQuery UI
 gem 'redis'                    # Key-Value store server for background jobs
 gem 'refile'                   # File Uploads
-gem 'responders'               # Clean controllers
+gem 'responders', '~> 2.0'     # Clean controllers
 gem 'sass-rails', '~> 5.0'     # SASS
 gem 'sidekiq'                  # Background Job Queue
 gem 'simple_form'              # Form generator
+gem 'turbolinks'               # Fast Page Loads
 gem 'uglifier', '>= 1.3.0'     # JS Compression
 gem 'will_paginate'            # Pagination
 gem 'will_paginate-bootstrap'  # Bootstrap styles for pagination

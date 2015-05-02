@@ -1,0 +1,42 @@
+!!!
+/[if lt IE 7 ] <html class="ie ie6" lang="en">
+/[if IE 7 ] <html class="ie ie7" lang="en">
+/[if IE 8 ] <html class="ie ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html.not-ie{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title The LJ Wedding
+    / Favicon
+    = favicon_link_tag 'vow-favicon.png'
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    / Web Fonts
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Stalemate:200,300,400,600,700,800&subset=latin,latin-ext", :rel => "stylesheet", :type => "text/css"}
+    %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    / Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements
+    /[if lt IE 9]
+      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  %body
+    .container.top-50px
+      .row
+        .col-sm-4.col-md-3.sidebar.bottom-50px
+          = link_to dashboard_path do
+            %h1 LJ Admin
+          %ul.nav.nav-sidebar
+            %li
+              = link_to 'Edit Wedding Info', edit_wedding_path(Wedding.first), class: 'btn btn-lg btn-primary'
+            %li
+              = link_to '#darkhorse', '#', class: 'btn btn-lg btn-primary'
+        .col-sm-8.col-md-9
+          = render 'layouts/flashes'
+          = yield
+      .row 
+        .col-xs-12
+          = render 'layouts/footer'

@@ -1,0 +1,20 @@
+.alert-notice {
+  background-color: #6DB151;
+  border-color: #d6e9c6;
+  color: white;
+}
+
+.alert-alert {
+  background-color: #3E9CE5;
+  border-color: #ebccd1;
+  color: white;
+}
+
+.fade {
+   opacity: 0;
+   -webkit-transition: opacity 0.3s linear;
+      -moz-transition: opacity 0.3s linear;
+       -ms-transition: opacity 0.3s linear;
+        -o-transition: opacity 0.3s linear;
+           transition: opacity 0.3s linear;
+ }

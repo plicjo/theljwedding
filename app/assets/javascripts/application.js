@@ -10,7 +10,11 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require z.jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//= require jquery-ui
+//= require gmaps-auto-complete
 //= require bootstrap.min
 //= require jquery.flexslider
 //= require fittext
@@ -25,4 +29,6 @@
 //= require jquery.parallax-1.1.3
 //= require jquery.isotope.min
 //= require functions
-//= require_tree .
+//= require get_window_size
+//= require autocomplete
+//= require turbolinks

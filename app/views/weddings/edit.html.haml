@@ -1,9 +1,0 @@
-%h1 Change Wedding Info
-= simple_form_for @wedding, html: {class: 'form-horizontal'} do |f|
-  %fieldset.left-20px
-    = f.error_notification
-    = f.input :location, input_html: { id: 'autocomplete' }, label: 'Location (this field will autocomplete with an address)'
-    = f.input :time, as: :datetime
-
-  .top-10px
-    = f.button :submit, class: 'btn btn-success'

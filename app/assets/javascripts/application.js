@@ -18,7 +18,7 @@
 //= require bootstrap.min
 //= require jquery.flexslider
 //= require fittext
-//= require jquery.prettyPhoto
+//= require custom.prettyPhoto
 //= require jquery.sticky
 //= require jquery.scrollTo
 //= require jquery.nav

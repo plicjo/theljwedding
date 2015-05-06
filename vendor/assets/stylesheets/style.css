@@ -626,6 +626,7 @@ position:relative;
   width:50%;    
   float: left;
   display:block;
+  max-height: 414px;
 } 
 
 .portfolio-big img {   
@@ -636,6 +637,7 @@ position:relative;
   width:25%;
   float: left;
   display:block;
+  max-height: 207px;
 }
 
 .portfolio img {   
@@ -647,6 +649,7 @@ position:relative;
   
   float:left;
   display:block;
+  max-height: 104px;
 }
 
 .portfolio-small img {   

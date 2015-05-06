@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class AdminController < ApplicationController
   layout 'admin'
   before_action :authenticate_user!
 

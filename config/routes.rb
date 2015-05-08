@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :guests, except: :show
   devise_for :users
   devise_scope :user do
     get 'admin', to: 'devise/sessions#new'

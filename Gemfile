@@ -34,6 +34,7 @@ group :development, :test do
   gem 'spring-commands-cucumber' # Spring for Cucumber
   gem 'spring-commands-rspec'    # Spring for RSpec
   gem 'faker'                    # Fake data
+  gem 'dotenv-rails'             # Environment Variables
 end
 
 group :development do

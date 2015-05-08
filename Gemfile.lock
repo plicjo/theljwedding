@@ -95,6 +95,9 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    dotenv (2.0.1)
+    dotenv-rails (2.0.1)
+      dotenv (= 2.0.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -373,6 +376,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
+  dotenv-rails
   factory_girl_rails
   faker
   figaro

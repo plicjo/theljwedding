@@ -1,0 +1,30 @@
+%h1
+  Your Guests
+  %small= link_to 'New Guest', new_guest_path, class: 'btn'
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Email
+      %th Phone number
+      %th Rsvp status
+      %th
+      %th
+      %th
+
+  %tbody
+    - @guests.each do |guest|
+      %tr
+        %td= guest.email
+        %td= guest.phone_number
+        %td
+          - if guest.rsvp_status
+            .text-success Done
+          - else
+            .text-warning Not Done
+        %td= link_to 'Edit', edit_guest_path(guest), class: 'btn btn-default'
+        %td= link_to 'Delete', guest, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-default'
+
+%br
+
+

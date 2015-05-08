@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore coverage
+/coverage
+
+# Ignore test folder
+/test

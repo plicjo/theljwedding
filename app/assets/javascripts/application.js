@@ -28,6 +28,7 @@
 //= require jquery.fitvids
 //= require jquery.parallax-1.1.3
 //= require jquery.isotope.min
+//= require functions
 //= require jquery.maskedinput
 //= require input-mask
 //= require get_window_size

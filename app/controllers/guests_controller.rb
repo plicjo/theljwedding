@@ -1,7 +1,7 @@
 class GuestsController < ApplicationController
-  layout 'admin'
   before_action :set_guest, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
+  layout 'admin'
 
   respond_to :html
 
@@ -26,7 +26,7 @@ class GuestsController < ApplicationController
 
   def update
     @guest.update(guest_params)
-    respond_with(@guest, location: guests_path)
+    respond_with @guest, location: guests_path
   end
 
   def destroy

@@ -38,7 +38,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate'                 # Annotate model column
+  gem 'annotate'                 # Annotate model column=
   gem 'better_errors'            # Better Ruby errors
   gem 'binding_of_caller'
   gem 'byebug'

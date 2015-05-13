@@ -24,7 +24,8 @@
       <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   %body
-    .container-fluid
-      = render 'layouts/home_page_flash'
-    = yield
-    = render 'layouts/footer'
+    .container.top-50px
+      .row
+        .col-sm-12
+          = render 'layouts/flashes'
+          = yield

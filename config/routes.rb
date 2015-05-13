@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rsvp', to: 'rsvps#new'
+  resources :rsvps, only: [:create, :update]
   resources :guests, except: :show
   devise_for :users
   devise_scope :user do

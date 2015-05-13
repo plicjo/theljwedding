@@ -1,0 +1,11 @@
+= simple_form_for(@rsvp) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :email
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :attending, as: :radio_buttons, collection: [['Accepts your invite with pleasure', true], ['Declines with regret', false]]
+    = f.input :food_option, as: :radio_buttons, collection: Rsvp::FOOD_OPTIONS
+  .form-actions
+    = f.button :submit, 'RSVP'

@@ -13,6 +13,7 @@
 #
 
 class Rsvp < ActiveRecord::Base
+  include ApplicationHelper
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   FOOD_OPTIONS = %w(Steak Salmon Chicken)
   enum food_option: { 'Steak': 0, 'Salmon': 1, 'Chicken': 2 }
@@ -24,7 +25,11 @@ class Rsvp < ActiveRecord::Base
   validates :email, :food_option, presence: true
   validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
   validates :food_option, inclusion: { in: FOOD_OPTIONS }
-  validates :attending, inclusion: { in: [true, false] , message: 'Please select an option' }
-  validates :email, inclusion: { in: Guest.pluck(:email),
+  validates :email, inclusion: { in: proc { Guest.pluck(:email) },
     message: "Your email is not included in the guest list. Did you type it correctly?" }
+
+  def email=(value)
+    super whitespace_stripper(value)
+  end
+
 end

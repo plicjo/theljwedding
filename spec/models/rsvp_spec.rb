@@ -32,4 +32,20 @@ RSpec.describe Rsvp, type: :model do
     }
   end
 
+  context 'SET #email' do
+
+    before do
+      rsvp.update(email: guest.email)
+    end
+
+    it 'safely saves if the value is set to nil' do
+      expect { rsvp.update(email: nil) }.to_not raise_error
+    end
+
+    it 'strips whitespace' do
+      rsvp.update(email: '  white@space.com   ')
+      expect(rsvp.email).to eq 'white@space.com'
+    end
+  end
+
 end

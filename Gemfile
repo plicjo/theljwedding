@@ -8,6 +8,7 @@ gem 'pg'                       # Postgres Database
 
 gem 'bcrypt'                   # Encryption
 gem 'coffee-rails', '~> 4.1.0' # CoffeeScript
+gem 'cocoon'                   # Dynamic Nested Forms
 gem 'devise'                   # Authentication
 gem 'figaro'                   # Environment Variables
 gem 'font-awesome-rails'       # Font Awesome

@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513185322) do
+ActiveRecord::Schema.define(version: 20150513204240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "additional_guests", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "food_option"
+    t.integer  "rsvp_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "additional_guests", ["rsvp_id"], name: "index_additional_guests_on_rsvp_id", using: :btree
 
   create_table "guests", force: :cascade do |t|
     t.string   "email"

@@ -3,8 +3,8 @@ Feature: Guests
 
   Scenario: Admin creates a guest
     Given I am logged in
-    When  I click "Guest Status"
-    Then  I should see "Guest List"
+    When  I click "Guest List"
+    Then  I should see "Guests"
     When  I click "New Guest"
     Then  I should see "New guest"
     When  I fill out a valid new guest form
@@ -13,8 +13,8 @@ Feature: Guests
   Scenario: Admin edits a guest
     Given a guest exists
     And   I am logged in
-    When  I click "Guest Status"
-    Then  I should see "Guest List"
+    When  I click "Guest List"
+    Then  I should see "Guests"
     When  I click "Edit"
     Then  I should see "Editing guest"
     When  I fill out a valid edit guest form
@@ -23,7 +23,7 @@ Feature: Guests
   Scenario: Admin deletes a guest
     Given a guest exists
     And   I am logged in
-    When  I click "Guest Status"
-    Then  I should see "Guest List"
+    When  I click "Guest List"
+    Then  I should see "Guests"
     When  I click "Delete"
     Then  I should see "Guest was successfully destroyed."

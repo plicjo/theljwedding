@@ -2,10 +2,16 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :email
-    = f.input :first_name
-    = f.input :last_name
-    = f.input :attending, as: :radio_buttons, collection: [['Accepts your invite with pleasure', true], ['Declines with regret', false]]
-    = f.input :food_option, as: :radio_buttons, collection: Rsvp::FOOD_OPTIONS
+    = f.input :email, required: false
+    = f.input :first_name, required: false
+    = f.input :last_name, required: false
+    = f.input :attending, as: :radio_buttons, collection: [['Accepts your invite with pleasure', 'true'], ['Declines with regret', 'false']], required: false
+    = f.input :food_option, as: :radio_buttons, collection: Rsvp::FOOD_OPTIONS, required: false
   .form-actions
-    = f.button :submit, 'RSVP'
+    #additional-guests
+      = f.simple_fields_for :additional_guests do |a|
+        = render 'additional_guest_fields', :f => a
+      .links
+        = link_to_add_association 'Add Additional Guest to Your Party', f, :additional_guests, class: 'btn top-20px'
+    .clearfix
+    = f.button :submit, 'RSVP', class: 'top-30px btn-lg'

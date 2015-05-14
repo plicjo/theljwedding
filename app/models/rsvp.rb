@@ -17,10 +17,14 @@ class Rsvp < ActiveRecord::Base
   FOOD_OPTIONS = %w(Steak Salmon Chicken)
   enum food_option: { 'Steak': 0, 'Salmon': 1, 'Chicken': 2 }
 
-  validates :first_name, :last_name, :email, presence: true
-  validates :attending,  :food_option, presence: true
+  has_many :additional_guests, dependent: :destroy
+  accepts_nested_attributes_for :additional_guests, allow_destroy: true
+
+  validates :first_name, :last_name, presence: true
+  validates :email, :food_option, presence: true
   validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
   validates :food_option, inclusion: { in: FOOD_OPTIONS }
+  validates :attending, inclusion: { in: [true, false] , message: 'Please select an option' }
   validates :email, inclusion: { in: Guest.pluck(:email),
     message: "Your email is not included in the guest list. Did you type it correctly?" }
 end

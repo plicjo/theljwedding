@@ -33,4 +33,5 @@
 //= require input-mask
 //= require get_window_size
 //= require autocomplete
+//= require cocoon
 //= require turbolinks

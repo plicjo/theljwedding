@@ -7,7 +7,6 @@ When(/^I fill in the RSVP information$/) do
     fill_in 'rsvp_email',      with: @guest.email
     fill_in 'rsvp_first_name', with: 'Example'
     fill_in 'rsvp_last_name',  with: 'Guest'
-    choose 'Accepts your invite with pleasure'
     choose 'Steak'
   end
 end

@@ -15,14 +15,14 @@
 require 'rails_helper'
 
 RSpec.describe Rsvp, type: :model do
-  let(:guest) { create(:guest) }
-  let(:rsvp)  { create(:rsvp)  }
+
+  let!(:guest) { create(:guest) }
+  let(:rsvp)  { build(:rsvp)  }
 
   context 'validations' do
     it { should validate_presence_of(:first_name)            }
     it { should validate_presence_of(:last_name)             }
     it { should validate_presence_of(:food_option)           }
-    it { should validate_inclusion_of(:attending).in_array([true, false])             }
     it { should validate_presence_of(:email)                 }
     it { should validate_length_of(:email)                   }
     it { 

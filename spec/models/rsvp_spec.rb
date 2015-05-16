@@ -16,7 +16,6 @@ require 'rails_helper'
 
 RSpec.describe Rsvp, type: :model do
 
-  let!(:guest) { create(:guest) }
   let(:rsvp)  { build(:rsvp)  }
 
   context 'validations' do
@@ -25,18 +24,9 @@ RSpec.describe Rsvp, type: :model do
     it { should validate_presence_of(:food_option)           }
     it { should validate_presence_of(:email)                 }
     it { should validate_length_of(:email)                   }
-    it { 
-         should validate_inclusion_of(:email)
-         .in_array(Guest.pluck(:email).to_a)
-         .with_message("Your email is not included in the guest list. Did you type it correctly?")
-    }
-  end
+    end
 
   context 'SET #email' do
-
-    before do
-      rsvp.update(email: guest.email)
-    end
 
     it 'safely saves if the value is set to nil' do
       expect { rsvp.update(email: nil) }.to_not raise_error

@@ -1,6 +1,6 @@
 class RsvpsController < ApplicationController
   layout 'guest'
-  
+
   def new
     @rsvp = Rsvp.new
     respond_with(@rsvp)
@@ -8,7 +8,7 @@ class RsvpsController < ApplicationController
 
   def create
     @rsvp = Rsvp.new(rsvp_params)
-    Guest.rsvp_status_update(@rsvp.email) if @rsvp.save
+    @rsvp.save
     respond_with @rsvp, location: root_path
   end
 
@@ -18,7 +18,7 @@ class RsvpsController < ApplicationController
     params.require(:rsvp).permit(
       :email, :first_name, :last_name, :food_option,
       additional_guests_attributes: [
-        :first_name, :id, :destroy,  
+        :first_name, :id, :destroy,
         :food_option, :last_name, :rsvp_id
       ]
     )

@@ -4,7 +4,7 @@ end
 
 When(/^I fill in the RSVP information$/) do
   within '#new_rsvp' do
-    fill_in 'rsvp_email',      with: @guest.email
+    fill_in 'rsvp_email',      with: 'admin@example.com'
     fill_in 'rsvp_first_name', with: 'Example'
     fill_in 'rsvp_last_name',  with: 'Guest'
     choose 'Steak'

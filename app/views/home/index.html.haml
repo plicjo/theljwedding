@@ -35,7 +35,7 @@
           %li
             %a{:href => "#tableware", :title => "Tableware"}
               %i.fa.fa-cutlery
-          %li
+          %li.hidden-xs
             %a{:href => "#gallery", :title => "Gallery"}
               %i.fa.fa-camera-retro
           / %li
@@ -180,13 +180,18 @@
             .gifts-icon
         %h1.text-center.top-30px Registry
     .row
-      .col-md-5.col-md-offset-1
+      .col-md-8.col-md-offset-2
         %p We are extremely lucky to have the family and friends that we do! we thank you all for your love, kindness, and support throughout the years and appreciate your generosity. those are the truly priceless gifts, and honestly, we don't need much else.
-        %p ...However, we've never been ones to turn down presents, so just in case - here is out Amazon registry:
-      .col-md-5
+        %p ...However, we've never been ones to turn down presents, so just in case - here are the stores we've registered with:
+    .row
+      .col-md-4.col-md-offset-2
         .text-center
           = link_to 'https://www.amazon.com/registry/wedding/2XXGY5Q30GTP0/ref=cm_sw_r_it_wr_o_tiRtvb0SNGRG8' do
             = image_tag 'amazon.png', class: 'img-responsive'
+      .col-md-4
+        .text-center
+          = link_to 'http://www.target.com/gift-registry/giftgiver?registryId=1ge8RNlFokBr8J4gIBc0xQ' do
+            = image_tag 'target.png', class: 'img-responsive'
 %section#tableware
   .container
     .row
@@ -195,7 +200,7 @@
           .img-container
             = image_tag '4.jpg', class: 'img-circle'
             .tableware-icon
-        %h1.text-center Suggested Spots from the Locals
+        %h1.text-center.top-30px Suggested Spots from the Locals
     .row
       .col-md-4.top-30px
         %h4 Breakfast
@@ -271,41 +276,41 @@
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0017.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0017.jpg"
         / PORTFOLIO MEDIUM IMAGES -four-
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0009.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0009.jpg"
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0010.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0010.jpg"
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0011.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0011.jpg"
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0012.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0012.jpg"
         / PORTFOLIO SMALL IMAGES -eight-
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0013.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0013.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0014.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0014.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0015.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0015.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0016.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0016.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0006.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0006.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0018.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0018.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0019.jpg"), data: {rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0019.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0020.jpg"), data: {rel: "gallery2"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0020.jpg"
       / <li> ENDS
@@ -314,47 +319,47 @@
       %li
         / PORTFOLIO BIG IMAGES -two-
         .portfolio-big.square
-          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0021.jpg"), data: { rel: "prettyPhoto[11]"} do
-            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0021.jpg"
-        .portfolio-big.square
-          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0022.jpg"), data: { rel: "prettyPhoto[11]"} do
-            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0022.jpg"
-        / PORTFOLIO MEDIUM IMAGES -four-
-        .portfolio.square
-          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0023.jpg"), data: { rel: "prettyPhoto[11]"} do
-            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0023.jpg"
-        .portfolio.square
-          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0024.jpg"), data: { rel: "prettyPhoto[11]"} do
-            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0024.jpg"
-        .portfolio.square
-          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0025.jpg"), data: { rel: "prettyPhoto[11]"} do
-            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0025.jpg"
-        .portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0026.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0026.jpg"
-        / PORTFOLIO SMALL IMAGES -eight-
-        .portfolio-small.square
-          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0027.jpg"), data: { rel: "prettyPhoto[11]"} do
-            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0027.jpg"
-        .portfolio-small.square
-          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0028.jpg"), data: { rel: "prettyPhoto[11]"} do
-            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0028.jpg"
-        .portfolio-small.square
+        .portfolio-big.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0029.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0029.jpg"
-        .portfolio-small.square
+        / PORTFOLIO MEDIUM IMAGES -four-
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
+          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0023.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0023.jpg"
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
+          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0024.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0024.jpg"
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
+          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0025.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0025.jpg"
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
+          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0021.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0021.jpg"
+        / PORTFOLIO SMALL IMAGES -eight-
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
+          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0027.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0027.jpg"
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
+          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0028.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0028.jpg"
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
+          = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0022.jpg"), data: { rel: "prettyPhoto[11]"} do
+            = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0022.jpg"
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0030.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0030.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0032.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0032.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0033.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0033.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0034.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0034.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0035.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0035.jpg"
       / <li> ENDS
@@ -369,40 +374,40 @@
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0037.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0037.jpg"
         / PORTFOLIO MEDIUM IMAGES -four-
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0038.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0038.jpg"
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0039.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0039.jpg"
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0040.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0040.jpg"
-        .portfolio.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0041.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0041.jpg"
         / PORTFOLIO SMALL IMAGES -eight-
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0042.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0042.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0043.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0043.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0044.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0044.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0045.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0045.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0046.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0046.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0047.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0047.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0048.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0048.jpg"
-        .portfolio-small.square
+        .hidden-sm.hidden-md.hidden-xs.portfolio-small.square
           = link_to asset_url("Lauren Jordan St Augustine Engagement-Lauren Olsen-0049.jpg"), data: { rel: "prettyPhoto[11]"} do
             = image_tag "Lauren Jordan St Augustine Engagement-Lauren Olsen-0049.jpg"

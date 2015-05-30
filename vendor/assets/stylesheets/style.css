@@ -348,7 +348,7 @@ section {
 
 .square-all img {
 position:relative;
-  opacity: .5;
+  opacity: 1;
   max-width:370px;
   max-height:370px;
   -webkit-border-radius: 50%;
@@ -362,7 +362,7 @@ position:relative;
 }
 
 .square-all:hover img { 
-  opacity:1;
+  opacity:.5;
 }
 
 /** ICONS OVER IMAGES **/

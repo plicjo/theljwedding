@@ -6,11 +6,11 @@ When(/^I fill out a valid recipe$/) do
   attach_file 'recipe_photo', 'spec/support/photo.jpg'
   fill_in 'recipe_title', with: 'Darkhorse Pie'
   fill_in 'recipe_family_name', with: 'Olsen Family'
-  click_button 'Add Ingredient'
+  click_link_or_button 'Add Ingredient'
   expect(page).to have_content 'Remove Ingredient'
 
   within '#ingredients' do
-    find('.recipe_ingredients_description input').set('2 Carrots')
+    find('.recipe_ingredients_ingredient_description input').set('2 Carrots')
   end
 
   click_button 'Add Step'

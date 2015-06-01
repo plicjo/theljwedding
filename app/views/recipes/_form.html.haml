@@ -11,7 +11,7 @@
     .progress-bar.progress-striped
   #photo
   = image_tag attachment_url(@recipe, :photo, :fill, 300, 300) if @recipe.photo_id?
-  %h4 Ingredients
+  %h4 Add Ingredients
   #ingredients
     = f.simple_fields_for :ingredients do |i|
       = render 'ingredient_fields', :f => i

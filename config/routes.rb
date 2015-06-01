@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'rsvp', to: 'rsvps#new'
   resources :rsvps, only: [:create, :update]
+  resources :recipes, only: [:new, :create, :index]
   devise_for :users
   devise_scope :user do
     get 'admin', to: 'devise/sessions#new'

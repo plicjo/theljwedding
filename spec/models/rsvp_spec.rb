@@ -16,7 +16,7 @@ require 'rails_helper'
 
 RSpec.describe Rsvp, type: :model do
 
-  let(:rsvp)  { build(:rsvp)  }
+  let(:rsvp) { build(:rsvp) }
 
   context 'validations' do
     it { should validate_presence_of(:first_name)            }

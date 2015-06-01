@@ -223,18 +223,12 @@
           299 Atlantic Blvd
           Atlantic Beach, FL
         %br
-        = link_to '(904) 241-2599', 'tele:904.241.2599'
       .col-md-4
-        %h4.top-30px LJ's first date
-        %p
-          %strong= link_to 'Tacolu', '//www.tacolu.com/'
-          = '-'
-          famous for their tacos and margaritas!
-        = link_to 'https://www.google.com/maps/dir/''/1712+Beach+Blvd,+Jacksonville+Beach,+FL+32250/data=!4m5!4m4!1m0!1m2!1m1!1s0x88e4499e953ea823:0x4e042f547b60a720?sa=X&ei=4JZGVdXQLsfUggSLiYHQCw&ved=0CB8QwwUwAA' do
-          1712 Beach Blvd
-          Jacksonville Beach, FL 32250
-        %br
-        = link_to '(904) 249-8226', 'tele:904.249.8226'
+        .alert.alert-info.top-30px
+          We are creating a cookbook for our new family! Send us a recipe from your family to ours!
+          %br
+          = link_to 'Submit a Recipe', new_recipe_path, class: ' top-20px btn btn-primary'
+
     .row
       .col-md-4
         %h4.top-30px Best Dessert in Town
@@ -259,9 +253,16 @@
         %br
         = link_to '(904) 372-0727', 'tele:904.372.0727'
       .col-md-4
-        .jumbotron
-          .alert-danger
-            Future home of Recipe submission copy
+        %h4.top-30px LJ's first date
+        %p
+          %strong= link_to 'Tacolu', '//www.tacolu.com/'
+          = '-'
+          famous for their tacos and margaritas!
+        = link_to 'https://www.google.com/maps/dir/''/1712+Beach+Blvd,+Jacksonville+Beach,+FL+32250/data=!4m5!4m4!1m0!1m2!1m1!1s0x88e4499e953ea823:0x4e042f547b60a720?sa=X&ei=4JZGVdXQLsfUggSLiYHQCw&ved=0CB8QwwUwAA' do
+          1712 Beach Blvd
+          Jacksonville Beach, FL 32250
+        %br
+        = link_to '(904) 249-8226', 'tele:904.249.8226'
 %section#gallery
   / Slider
   .flexslider

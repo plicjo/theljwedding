@@ -1,6 +1,7 @@
 Feature: Cookbook
   Visitors can submit a recipe and view other submitted recipes
 
+  @javascript
   Scenario: Visitor submits a recipe
     Given I am on the homepage
     When I click "Submit a Recipe"

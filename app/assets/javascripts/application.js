@@ -33,5 +33,7 @@
 //= require input-mask
 //= require get_window_size
 //= require autocomplete
+//= require refile
+//= require file_upload
 //= require cocoon
 //= require turbolinks

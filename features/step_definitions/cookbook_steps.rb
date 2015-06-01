@@ -3,7 +3,7 @@ Given(/^I am on the homepage$/) do
 end
 
 When(/^I fill out a valid recipe$/) do
-  attach_file 'recipe_photo', 'spec/support/photo.png'
+  attach_file 'recipe_photo', 'spec/support/photo.jpg'
   fill_in 'recipe_title', with: 'Darkhorse Pie'
   fill_in 'recipe_family_name', with: 'Olsen Family'
   click_button 'Add Ingredient'

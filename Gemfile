@@ -6,6 +6,7 @@ gem 'rails', '4.2.1'
 gem 'passenger'                # Web Server
 gem 'pg'                       # Postgres Database
 
+gem 'aws-sdk'                  # Connect to S3
 gem 'bcrypt'                   # Encryption
 gem 'coffee-rails', '~> 4.1.0' # CoffeeScript
 gem 'cocoon'                   # Dynamic Nested Forms
@@ -18,8 +19,11 @@ gem 'hirb'                     # Pretty console
 gem 'jquery-rails'             # jQuery
 gem 'jquery-turbolinks'        # Integrate Turbolinks with jQuery better
 gem 'jquery-ui-rails'          # jQuery UI
+gem 'mini_magick'              # Image Processing
 gem 'redis'                    # Key-Value store server for background jobs
-gem 'refile'                   # File Uploads
+gem 'refile', require: 'refile/rails'  # File Uploads
+gem 'refile-mini_magick'       # Integrates Refile and MiniMagick
+gem 'refile-s3'                # Upload images to S3
 gem 'responders', '~> 2.0'     # Clean controllers
 gem 'sass-rails', '~> 5.0'     # SASS
 gem 'sidekiq'                  # Background Job Queue

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513204240) do
+ActiveRecord::Schema.define(version: 20150601190150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,27 @@ ActiveRecord::Schema.define(version: 20150513204240) do
     t.boolean  "rsvp_status", default: false
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "ingredient_description"
+    t.integer  "recipe_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "ingredients", ["recipe_id"], name: "index_ingredients_on_recipe_id", using: :btree
+
+  create_table "recipes", force: :cascade do |t|
+    t.string   "photo_id"
+    t.string   "title"
+    t.string   "family_name"
+    t.string   "prep_time"
+    t.string   "cook_time"
+    t.integer  "number_of_servings"
+    t.text     "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   create_table "rsvps", force: :cascade do |t|
@@ -62,4 +83,5 @@ ActiveRecord::Schema.define(version: 20150513204240) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "ingredients", "recipes"
 end

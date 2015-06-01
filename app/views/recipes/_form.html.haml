@@ -1,0 +1,22 @@
+= simple_form_for @recipe do |f|
+  = f.input :title, placeholder: 'Ex: Green Eggs and Ham'
+  = f.input :family_name, placeholder: 'Olsen Family'
+  = f.input :prep_time, placeholder: 'Ex: 10 minutes'
+  = f.input :cook_time, placeholder: 'Ex: 25 minutes'
+  = f.input :number_of_servings, as: :integer
+  = f.label :photo
+  = f.attachment_field :photo, direct: true
+  = f.error :photo, id: 'photo-errors'
+  #progress.progress.fade.top-10px
+    .progress-bar.progress-striped
+  #photo
+  = image_tag attachment_url(@recipe, :photo, :fill, 300, 300) if @recipe.photo_id?
+  %h4 Ingredients
+  #ingredients
+    = f.simple_fields_for :ingredients do |i|
+      = render 'ingredient_fields', :f => i
+    .links
+      = link_to_add_association 'Add Ingredient', f, :ingredients, class: 'btn top-20px bottom-20px'
+  = f.input :description, input_html: { rows: 5 }
+  = f.submit 'Submit Recipe', class: 'btn'
+

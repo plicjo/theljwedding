@@ -2,11 +2,11 @@
   .col-sm-9
     %h1
       Family Cookbook
-      = link_to 'Back to Wedding Site', root_path, class: 'btn btn-sm'
+      = link_to 'Back to Wedding Site', root_path, class: 'btn btn-sm hidden-print'
     .row
-      .col-xs-6
+      .col-xs-12.col-sm-6
         = image_tag attachment_url(@recipe, :photo), class: 'img-responsive'
-      .col-xs-6
+      .col-xs-12.col-sm-6
         %h2
           = @recipe.title
           %small= @recipe.family_name
@@ -29,7 +29,7 @@
     %ol
     - @recipe.recipe_steps.each do |step|
       %li= step.step_description
-  .col-md-3#recipe-list
+  .col-sm-3#recipe-list
     %h1 Submitted Recipes
     %ul
     = render 'recipe_list'

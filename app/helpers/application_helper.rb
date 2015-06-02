@@ -11,4 +11,5 @@ module ApplicationHelper
   def food_options
     Rsvp::FOOD_OPTIONS
   end
+
 end

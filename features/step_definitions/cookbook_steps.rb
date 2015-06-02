@@ -33,7 +33,13 @@ end
 
 Then(/^I should see that the recipe has been created$/) do
   VCR.use_cassette 'amazon_s3', allow_playback_repeats:true, record: :new_episodes do
-    expect(page).to have_Content 'Darkhorse Pie'
     expect(page).to have_content 'Recipe was successfully created.'
+    expect(page).to have_content 'Back to Wedding Site'
+  end
+end
+
+Then(/^I should see a list of recipes$/) do
+  within '#recipe-list' do
+    expect(page).to have_content 'Darkhorse Pie'
   end
 end

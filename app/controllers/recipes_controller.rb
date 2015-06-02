@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.save
-    respond_with @recipe, location: root_path
+    respond_with @recipe
   end
 
   def show

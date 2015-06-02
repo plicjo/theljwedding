@@ -1,0 +1,37 @@
+.row
+  .col-sm-9
+    %h1
+      Family Cookbook
+      = link_to 'Back to Wedding Site', root_path, class: 'btn btn-sm'
+    .row
+      .col-xs-6
+        = image_tag attachment_url(@recipe, :photo), class: 'img-responsive'
+      .col-xs-6
+        %h2
+          = @recipe.title
+          %small= @recipe.family_name
+        %p
+          Serves:
+          = @recipe.number_of_servings
+        %p= @recipe.description
+    %p
+      Prep Time:
+      = @recipe.prep_time
+    %p
+      Cook Time:
+      = @recipe.cook_time
+    %h4 Ingredients
+    %ul
+    - @recipe.ingredients.each do |ingredient|
+      %li= ingredient.ingredient_description
+
+    %h4.top-20px Steps
+    %ol
+    - @recipe.recipe_steps.each do |step|
+      %li= step.step_description
+  .col-md-3#recipe-list
+    %h1 Submitted Recipes
+    %ul
+    - Recipe.all.each do |recipe|
+      %li
+        = link_to recipe.title, recipe_path(recipe)

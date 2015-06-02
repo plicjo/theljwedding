@@ -32,6 +32,4 @@
   .col-md-3#recipe-list
     %h1 Submitted Recipes
     %ul
-    - Recipe.all.each do |recipe|
-      %li
-        = link_to recipe.title, recipe_path(recipe)
+    = render 'recipe_list'

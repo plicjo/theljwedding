@@ -1,6 +1,12 @@
 .row
-  .col-sm-8.col-sm-offset-2
+  .col-md-8
     %h1 New Recipe
     %h2 We are creating a cookbook for our new family!
     %p.lead Please upload a recipe to our family cookbook!
     = render 'form'
+  .col-md-4
+    %h1 Recipes
+    %ul
+    - Recipe.all.each do |recipe|
+      %li
+        = link_to recipe.title, recipe_path(recipe)

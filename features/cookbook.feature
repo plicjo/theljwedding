@@ -7,4 +7,4 @@ Feature: Cookbook
     When I click "Submit a Recipe"
     Then I should see "New Recipe"
     When I fill out a valid recipe
-    Then I should see "Recipe was successfully created."
+    Then I should see that the recipe has been created

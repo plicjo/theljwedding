@@ -8,7 +8,7 @@ class RsvpsController < ApplicationController
 
   def create
     @rsvp = Rsvp.new(rsvp_params)
-    @rsvp.save
+    flash[:notice] = "We've received your RSVP. Thank you! Why not check out our #{new_recipe_link('family cookbook')} or #{new_recipe_link('submit a recipe')}?" if @rsvp.save
     respond_with @rsvp, location: root_path
   end
 
@@ -22,5 +22,9 @@ class RsvpsController < ApplicationController
         :food_option, :last_name, :rsvp_id
       ]
     )
+  end
+
+  def new_recipe_link link_text
+    view_context.link_to "#{link_text}", new_recipe_path
   end
 end

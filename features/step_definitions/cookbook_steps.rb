@@ -3,10 +3,11 @@ Given(/^I am on the homepage$/) do
 end
 
 When(/^I fill out a valid recipe$/) do
-  VCR.use_cassette 'amazon_s3' do
+  VCR.use_cassette 'amazon_s3', allow_playback_repeats: true, record: :new_episodes do
     attach_file 'recipe_photo', 'spec/support/photo.jpg'
     fill_in 'recipe_title', with: 'Darkhorse Pie'
     fill_in 'recipe_family_name', with: 'Olsen Family'
+
     click_link_or_button 'Add Ingredient'
     expect(page).to have_content 'Remove Ingredient'
 
@@ -14,12 +15,12 @@ When(/^I fill out a valid recipe$/) do
       find('.recipe_ingredients_ingredient_description input').set('2 Carrots')
     end
 
-    # click_button 'Add Step'
-    # expect(page).to have_content 'Remove Step'
+     click_link_or_button 'Add Step'
+     expect(page).to have_content 'Remove Step'
 
-    # within '#steps' do
-    #   find('.recipe_steps_description input').set('Chop the Carrots. NAO!')
-    # end
+     within '#recipe_steps' do
+       find('.recipe_recipe_steps_step_description input').set('Chop the Carrots. NAO!')
+     end
 
     fill_in 'recipe_prep_time', with: '10 minutes'
     fill_in 'recipe_cook_time', with: '30 minutes'
@@ -27,5 +28,12 @@ When(/^I fill out a valid recipe$/) do
     fill_in 'recipe_description', with: 'Cut Up Carrots from the exotic land of Indonesia. What a great recipe for a new couple!'
 
     click_button 'Submit Recipe'
+  end
+end
+
+Then(/^I should see that the recipe has been created$/) do
+  VCR.use_cassette 'amazon_s3', allow_playback_repeats:true, record: :new_episodes do
+    expect(page).to have_Content 'Darkhorse Pie'
+    expect(page).to have_content 'Recipe was successfully created.'
   end
 end

@@ -1,6 +1,6 @@
 = simple_form_for @recipe do |f|
   = f.input :title, placeholder: 'Ex: Green Eggs and Ham'
-  = f.input :family_name, placeholder: 'Olsen Family'
+  = f.input :family_name, placeholder: 'Ex: Olsen Family'
   = f.input :prep_time, placeholder: 'Ex: 10 minutes'
   = f.input :cook_time, placeholder: 'Ex: 25 minutes'
   = f.input :number_of_servings, as: :integer
@@ -17,6 +17,13 @@
       = render 'ingredient_fields', :f => i
     .links
       = link_to_add_association 'Add Ingredient', f, :ingredients, class: 'btn top-20px bottom-20px'
+  %h4 Recipe Steps
+  #recipe_steps
+    = f.simple_fields_for :recipe_steps do |s|
+      = render 'recipe_step_fields', :f => s
+    .links
+      = link_to_add_association 'Add Step', f, :recipe_steps, class: 'btn top-20px bottom-20px'
+
   = f.input :description, input_html: { rows: 5 }
   = f.submit 'Submit Recipe', class: 'btn'
 

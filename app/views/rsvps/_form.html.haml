@@ -5,7 +5,7 @@
     = f.input :email, required: false
     = f.input :first_name, required: false
     = f.input :last_name, required: false
-    = f.input :food_option, as: :radio_buttons, collection: Rsvp::FOOD_OPTIONS, required: false
+    = f.input :food_option, as: :radio_buttons, collection: food_options, required: false
   .form-actions
     #additional-guests
       = f.simple_fields_for :additional_guests do |a|

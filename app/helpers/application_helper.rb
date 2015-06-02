@@ -8,4 +8,7 @@ module ApplicationHelper
     Recipe.page(params[:page]).order(:title)
   end
 
+  def food_options
+    Rsvp::FOOD_OPTIONS
+  end
 end

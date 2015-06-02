@@ -23,3 +23,17 @@ When(/^I fill in the additional guest's information$/) do
     choose 'Salmon'
   end
 end
+
+Given(/^an rsvp exists$/) do
+  @rsvp = FactoryGirl.create(:rsvp)
+end
+
+Then(/^I should see the food option counts$/) do
+  expect(page).to have_content 'Food Option Totals'
+  expect(page).to have_content 1 # the count for one of the rsvp options will be 1
+  expect(page).to have_content 0 # the count for the other options is zero
+end
+
+Then(/^I should see info the for RSVP$/) do
+  expect(page).to have_content @rsvp.email
+end

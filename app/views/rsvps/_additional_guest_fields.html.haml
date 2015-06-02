@@ -4,5 +4,5 @@
   %h3 Additional Guest
   = f.input :first_name, required: false
   = f.input :last_name, required: false
-  = f.input :food_option, as: :radio_buttons, collection: Rsvp::FOOD_OPTIONS, required: false
+  = f.input :food_option, as: :radio_buttons, collection: food_options, required: false
   = link_to_remove_association "Remove additional guest", f

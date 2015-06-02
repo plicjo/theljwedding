@@ -1,0 +1,55 @@
+%h1
+  RSVP Management
+%h2 Food Option Totals
+%hr
+.row
+  .col-sm-4
+    %h4 Steak
+    %p= FoodCount.steak_total
+  .col-sm-4
+    %h4 Salmon
+    %p= FoodCount.salmon_total
+  .col-sm-4
+    %h4 Chicken
+    %p= FoodCount.chicken_total
+%hr
+%h2 Your Guests
+%table.table.table-hover
+  %thead
+    %tr
+      %th Email
+      %th First Name
+      %th Last Name
+      %th Additional Guests
+      %th Food Option
+      %th
+      %th
+
+  %tbody
+    - @rsvps.each do |guest|
+      %tr
+        %td= guest.email
+        %td= guest.first_name
+        %td= guest.last_name
+        %td= guest.additional_guests.count
+        %td= guest.food_option
+= will_paginate @rsvps, param_name: 'page', render: BootstrapPagination::Rails
+
+%h2 RSVP Additions
+%table.table.table-hover
+  %thead
+    %tr
+      %th First Name
+      %th Last Name
+      %th Food Option
+      %th
+      %th
+
+  %tbody
+    - @rsvps.each do |guest|
+      - if guest.additional_guests.any?
+        - guest.additional_guests.page(params[:additonal_guests_page]).order(:last_name).each do |additional_guest|
+          %tr
+            %td= additional_guest.first_name
+            %td= additional_guest.last_name
+            %td= additional_guest.food_option

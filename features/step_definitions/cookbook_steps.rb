@@ -3,7 +3,7 @@ Given(/^I am on the homepage$/) do
 end
 
 When(/^I fill out a valid recipe$/) do
-  VCR.use_cassette 'amazon_s3', allow_playback_repeats: true do
+  VCR.use_cassette 'amazon_s3', allow_playback_repeats: true, record: :new_episodes do
     attach_file 'recipe_photo', 'spec/support/photo.jpg'
     fill_in 'recipe_title', with: 'Darkhorse Pie'
     fill_in 'recipe_family_name', with: 'Olsen Family'
@@ -32,7 +32,7 @@ When(/^I fill out a valid recipe$/) do
 end
 
 Then(/^I should see that the recipe has been created$/) do
-  VCR.use_cassette 'amazon_s3', allow_playback_repeats: true do
+  VCR.use_cassette 'amazon_s3', allow_playback_repeats: true, record: :new_episodes do
     expect(page).to have_content 'Recipe was successfully created.'
     expect(page).to have_content 'Back to Wedding Site'
   end

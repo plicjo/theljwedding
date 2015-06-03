@@ -1,0 +1,9 @@
+.row
+  .col-sm-8.col-sm-offset-2
+    %h1 New Email Blast
+    %h2 Send a mass email out to all of your RSVP'd guests
+    %p.lead You can only do this once per day. Also, this might take awhile...
+    = simple_form_for @rsvp_email do |f|
+      = f.input :subject
+      = f.input :body, input_html: { rows: 5 }
+      = f.submit 'Send Email Blast', class: 'btn'

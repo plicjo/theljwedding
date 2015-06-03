@@ -71,6 +71,7 @@ end
 
 group :production do
   gem 'heroku-deflater' # Gzip static files
+  gem 'newrelic_rpm'    # App Monitoring
   gem 'rails_12factor'  # Heroku plugins
 end
 

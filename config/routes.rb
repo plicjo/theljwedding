@@ -10,4 +10,9 @@ Rails.application.routes.draw do
 
   get 'admin/dashboard', as: :dashboard
   root 'home#index'
+
+  unless Rails.env.production?
+    get 'ui(/:action)', controller: 'ui'
+  end
+
 end

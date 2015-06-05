@@ -1,0 +1,16 @@
+!!!
+%html(lang="en-US" itemscope="")
+%head
+  %title LJ Wedding UI
+  = stylesheet_link_tag "ui"
+%body
+  %wrapper
+    %header
+      %h1 Family Cookbook
+      = link_to "Add a Recipe", "#"
+    %aside
+      %ul
+        - 5.times do
+          %li= link_to "Oven-Roasted Parmesan Potatoes with Sour Cream"
+    %section
+      = yield

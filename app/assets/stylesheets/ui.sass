@@ -106,12 +106,14 @@ section
         color: $gray-light
         margin: 4rem 0 2rem
       form
-        input[type="text"]
-          border: 0
-          border-bottom: 1px solid lighten($gray-light, 40%)
+        input
           outline: none
-          &:focus
-            border-bottom: 1px solid $gray-light
+          &[type="text"]
+            border: 0
+            border-bottom: 1px solid lighten($gray-light, 40%)
+            outline: none
+            &:focus
+              border-bottom: 1px solid $gray-light
         textarea
           border: 1px solid lighten($gray-light, 40%)
           outline: none

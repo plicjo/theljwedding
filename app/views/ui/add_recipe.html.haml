@@ -1,4 +1,4 @@
-%section#add_recipe
+%article#add_recipe
   %h1 Add a Recipe
 
   %h2 Add your favorite recipe to help us create a cookbook for our new family. Thanks for sharing!
@@ -18,35 +18,37 @@
           %label Recipe description
         %dd
           %textarea
-      %dl.third
-        %dt
-          %label Prep time
-        %dd
-          %input(type="text")
-      %dl.third
-        %dt
-          %label Cook time
-        %dd
-          %input(type="text")
-      %dl.third
-        %dt
-          %label Servings (optional)
-        %dd
-          %input(type="text")
+      .summary
+        %dl.third
+          %dt
+            %label Prep time
+          %dd
+            %input(type="text")
+        %dl.third
+          %dt
+            %label Cook time
+          %dd
+            %input(type="text")
+        %dl.third
+          %dt
+            %label Servings (optional)
+          %dd
+            %input(type="text")
       %dl
         %dt
           %label Photo of dish (optional)
         %dd
           %input(type="file")
-      %h2 Ingredients
-      %ul
-        %li
-          %input(type="text")
-          = link_to "Remove", "#", class: "remove"
-        %li
-          = link_to "Add another ingredient", "#", class: "add"
-      %h2 Instructions
-      %dl
+      %h3 Ingredients
+      %ul.ingredients
+        - 5.times do
+          %li
+            %input(type="text")
+            = link_to "Remove", "#", class: "remove"
+      = link_to "Add another ingredient", "#", class: "add"
+
+      %h3 Instructions
+      %dl.instructions
         %dt
           %label Step 1
         %dd

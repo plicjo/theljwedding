@@ -7,7 +7,7 @@ class UiController < ApplicationController
     when /^_/
       false
     else
-      "ui_application"
+      "cookbook"
     end
   end
 end

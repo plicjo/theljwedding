@@ -1,29 +1,65 @@
 = simple_form_for @recipe do |f|
-  = f.input :title, placeholder: 'Ex: Green Eggs and Ham'
-  = f.input :family_name, placeholder: 'Ex: Olsen Family'
-  = f.input :prep_time, placeholder: 'Ex: 10 minutes'
-  = f.input :cook_time, placeholder: 'Ex: 25 minutes'
-  = f.input :number_of_servings, as: :integer
-  = f.label :photo
-  = f.attachment_field :photo, direct: true
-  = f.error :photo, id: 'photo-errors'
-  #progress.progress.fade.top-10px
-    .progress-bar.progress-striped
-  #photo
-  = image_tag attachment_url(@recipe, :photo, :fill, 300, 300) if @recipe.photo_id?
-  %h4 Add Ingredients
-  #ingredients
-    = f.simple_fields_for :ingredients do |i|
-      = render 'ingredient_fields', :f => i
+  = f.error_notification
+  %fieldset
+    %dl
+      %dt
+        %label Recipe name
+      %dd
+        = f.input_field :title
+      %dt
+        %label Your family name
+      %dd
+        = f.input_field :family_name
+      %dt
+        %label Recipe description
+      %dd
+        = f.text_area :description
+    .summary
+      %dl.third
+        %dt
+          %label Prep time
+        %dd
+          = f.input_field :prep_time
+      %dl.third
+        %dt
+          %label Cook time
+        %dd
+          = f.input_field :cook_time
+      %dl.third
+        %dt
+          %label Servings (optional)
+        %dd
+          = f.text_field :number_of_servings
+    %dl
+      %dt
+        %label Photo of dish (optional)
+      %dd
+        = f.attachment_field :photo, direct: true
+        = f.error :photo, id: 'photo-errors'
+        #progress.progress.fade.top-10px
+          .progress-bar.progress-striped
+        #photo
+        = image_tag attachment_url(@recipe, :photo, :fill, 300, 300) if @recipe.photo_id?
+    %h3 Ingredients
+    #ingredients
+      = f.simple_fields_for :ingredients do |i|
+        = render 'ingredient_fields', :f => i
     .links
-      = link_to_add_association 'Add Ingredient', f, :ingredients, class: 'btn top-20px bottom-20px'
-  %h4 Recipe Steps
-  #recipe_steps
-    = f.simple_fields_for :recipe_steps do |s|
-      = render 'recipe_step_fields', :f => s
-    .links
-      = link_to_add_association 'Add Step', f, :recipe_steps, class: 'btn top-20px bottom-20px'
+      = link_to_add_association 'Add another ingredient', f, :ingredients, class: 'add'
+    %h3 Instructions
+    %dl.instructions
+      %dt
+        %label Step 1
+      %dd
+        %textarea
+        = link_to "Remove", "#", class: "remove"
+      %dt
+        %label Step 2
+      %dd
+        %textarea
+        = link_to "Remove", "#", class: "remove"
+    = link_to "Add another step", "#", class: "add"
+  %fieldset.actions
+    = f.submit 'Add recipe'
 
-  = f.input :description, input_html: { rows: 5 }
-  = f.submit 'Submit Recipe', class: 'btn'
 

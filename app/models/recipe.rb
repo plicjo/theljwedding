@@ -10,5 +10,4 @@ class Recipe < ActiveRecord::Base
   validates :description, presence: true
   validates :number_of_servings, numericality: { only_integer: true }
   validates_presence_of :photo, message: 'needs a photo.'
-
 end

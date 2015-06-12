@@ -4,6 +4,9 @@
   %title LJ Wedding UI
   = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500|Playfair+Display"
   = stylesheet_link_tag "ui"
+  = csrf_meta_tags
+  %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
 
 %body
   %header
@@ -12,6 +15,7 @@
   %section
     %aside
       %ul
-        - 5.times do
-          %li= link_to "Oven-Roasted Parmesan Potatoes with Sour Cream"
+        - Recipe.all.each do |recipe|
+          %li
+            = link_to recipe.title, recipe_path(recipe)
     = yield

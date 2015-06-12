@@ -31,6 +31,10 @@ a
     +button($red)
   &.add
     +button($green)
+    +max-width(695)
+      display: block
+      padding: 1.5rem
+      width: 100%
 
 section, header
   width: 85%
@@ -53,6 +57,9 @@ body > header
     padding: 1.75rem
     background: $cream
     box-sizing: border-box
+    +max-width(695)
+      background: #fff
+      padding-left: 0
   a
     font: .875em/4.2 $body-font
     font-weight: 100
@@ -68,11 +75,23 @@ section
   display: flex
   flex-direction: row
   justify-content: start
+  +max-width(695)
+    flex-direction: column
   aside
     font: .875em/1.5 $header-font
     background: $cream
     flex: 0 0 24rem
     box-sizing: border-box
+    +max-width(695)
+      order: 2
+      flex: 1 1 auto
+      &:before
+        font: 1.3rem $body-font
+        text-transform: uppercase
+        color: lighten($red, 10%)
+        display: block
+        padding: 1.75rem
+        content: 'Recipes'
     ul
       li
         a
@@ -88,6 +107,8 @@ section
     flex: 0 1 auto
     padding: 3rem 4rem
     box-sizing: border-box
+    +max-width(690)
+      padding: 3rem 0
     > h1
       font-size: 3.8rem
       font-weight: normal
@@ -133,18 +154,23 @@ section
             margin: 0 0 3rem
             input, textarea
               width: 100%
-          &.third
-            float: left
-            width: 31.3%
-            box-sizing: border-box
-            + dl.third
-              margin-left: 2rem
         .summary
           display: flex
           flex-direction: row
           justify-content: space-between
-          .third
-            flex: 0 1 auto
+          +max-width(695)
+            display: block
+          dl.third
+            flex: 0 1 31.3%
+            box-sizing: border-box
+            + dl.third
+              margin-left: 2rem
+            +max-width(695)
+              flex: 0 0 100%
+              width: 100%
+              margin: 0 0 2rem
+              + dl.third
+                margin-left: 0
         ul.ingredients
           li
             margin: 0 0 2rem
@@ -159,10 +185,15 @@ section
             display: flex
             flex-direction: row
             justify-content: space-between
+            +max-width(695)
+              display: block
             textarea
               flex: 1 1 78%
               margin: 0 2rem 0 0
               box-sizing: border-box
+              +max-width(695)
+                flex: 0 0 100%
+                margin: 0 0 2rem
             a.remove
               height: 2.7rem
         fieldset.actions
@@ -179,6 +210,8 @@ section
             transition: background .3s
             &:hover
               background: saturate($green, 20%)
+            +max-width(695)
+              width: 100%
     &#view_recipe
       h1
         mark
@@ -198,6 +231,10 @@ section
       img
         float: left
         margin: 0 3.5rem 3.5rem 0
+        +max-width(695)
+          float: none
+          display: block
+          margin: 0 auto 2rem
       blockquote
         p
           font-size: 2rem

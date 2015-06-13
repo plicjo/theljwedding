@@ -14,7 +14,7 @@
 class AdditionalGuest < ActiveRecord::Base
   belongs_to :rsvp, dependent: :destroy
 
-  enum food_option: { 'Steak': 0, 'Salmon': 1, 'Chicken': 2 }
+  enum food_option: { 'Beef': 0, 'Fish': 1, 'Chicken': 2, 'Veggies': 4 }
 
   validates :first_name, :last_name, presence: true
   validates :food_option, presence: true

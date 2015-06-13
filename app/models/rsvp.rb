@@ -15,8 +15,8 @@
 class Rsvp < ActiveRecord::Base
   include ApplicationHelper
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  FOOD_OPTIONS = %w(Steak Salmon Chicken)
-  enum food_option: { 'Steak': 0, 'Salmon': 1, 'Chicken': 2 }
+  FOOD_OPTIONS = %w(Beef Fish Chicken Veggies)
+  enum food_option: { 'Beef': 0, 'Fish': 1, 'Chicken': 2, 'Veggies': 4 }
 
   has_many :additional_guests, dependent: :destroy
   accepts_nested_attributes_for :additional_guests, allow_destroy: true

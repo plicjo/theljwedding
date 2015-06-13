@@ -1,15 +1,19 @@
 class FoodCount
 
-  def self.steak_total
-    Rsvp.Steak.count + AdditionalGuest.Steak.count
+  def self.beef_total
+    Rsvp.Beef.count + AdditionalGuest.Beef.count
   end
 
-  def self.salmon_total
-    Rsvp.Salmon.count + AdditionalGuest.Salmon.count
+  def self.fish_total
+    Rsvp.Fish.count + AdditionalGuest.Fish.count
   end
 
   def self.chicken_total
     Rsvp.Chicken.count + AdditionalGuest.Chicken.count
+  end
+
+  def self.veggies_total
+    Rsvp.Veggies.count + AdditionalGuest.Veggies.count
   end
 
 end

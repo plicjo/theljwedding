@@ -7,7 +7,7 @@ When(/^I fill in the RSVP information$/) do
     fill_in 'rsvp_email',      with: 'admin@example.com'
     fill_in 'rsvp_first_name', with: 'Example'
     fill_in 'rsvp_last_name',  with: 'Guest'
-    choose 'Steak'
+    choose 'Roasted Prime Rib of Beef'
   end
 end
 
@@ -20,7 +20,7 @@ When(/^I fill in the additional guest's information$/) do
   within '#additional-guests' do
     find('.rsvp_additional_guests_first_name input').set('Example')
     find('.rsvp_additional_guests_last_name input').set('Guest')
-    choose 'Salmon'
+    choose 'Mahi-Mahi with a Fresh Mango Salsa or Lemon Herb Sauce'
   end
 end
 

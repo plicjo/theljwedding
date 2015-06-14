@@ -1,4 +1,5 @@
 .nested-fields
-  %hr
-  = f.input :ingredient_description, placeholder: 'Ex: 2 eggs'
-  = link_to_remove_association 'Remove Ingredient', f
+  %ul.ingredients
+    %li
+      = f.input_field :ingredient_description
+      = link_to_remove_association 'Remove', f, class: 'remove'

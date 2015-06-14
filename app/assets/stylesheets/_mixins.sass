@@ -1,0 +1,33 @@
+$body-font: "Fira Sans", sans-serif
+$header-font: "Playfair Display", serif
+
+$red: #cf4647
+$cream: #f9f7f4
+$gray-dark: #2f2f2f
+$gray-med: #504f4f
+$gray-light: #5c5c5c
+$black: #4f4844
+$green: #77a79a
+
+= min-width($width: 900)
+  @media screen and (min-width: #{$width}px)
+    @content
+    transition: all .5s ease-in-out
+= max-width($width: 900)
+  @media screen and (max-width: #{$width}px)
+    @content
+    transition: all .5s ease-in-out
+
+= button($color: gray)
+  font-size: 1.3rem
+  font-weight: 500
+  text-align: center
+  color: $color
+  padding: .3rem 1rem
+  border: 1px solid $color
+  border-radius: .3rem
+  box-sizing: border-box
+  transition: all .3s
+  &:hover
+    color: #fff
+    background: $color

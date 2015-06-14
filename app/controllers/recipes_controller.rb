@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  layout 'guest'
+  layout 'cookbook'
 
   def new
     @recipe = Recipe.new

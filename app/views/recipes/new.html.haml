@@ -1,9 +1,6 @@
-.row
-  .col-md-8
-    %h1 New Recipe
-    %h2 We are creating a cookbook for our new family!
-    %p.lead Please upload a recipe to our family cookbook!
-    = render 'form'
-  .col-md-4#recipe-list
-    %h1 Submitted Recipes
-    = render 'recipe_list'
+%article#add_recipe
+  %h1 Add a Recipe
+
+  %h2 Add your favorite recipe to help us create a cookbook for our new family. Thanks for sharing!
+  = render 'form'
+

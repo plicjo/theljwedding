@@ -5,8 +5,9 @@ ruby '2.2.2'
 gem 'rails', '4.2.1'
 gem 'passenger'                # Web Server
 gem 'pg'                       # Postgres Database
-
+gem 'autoprefixer-rails'       # Autoprefix CSS styles
 gem 'aws-sdk'                  # Connect to S3
+gem 'bourbon'                  # Bourbon
 gem 'bcrypt'                   # Encryption
 gem 'coffee-rails', '~> 4.1.0' # CoffeeScript
 gem 'cocoon'                   # Dynamic Nested Forms
@@ -28,6 +29,7 @@ gem 'responders', '~> 2.0'     # Clean controllers
 gem 'sass-rails', '~> 5.0'     # SASS
 gem 'sidekiq'                  # Background Job Queue
 gem 'simple_form'              # Form generator
+gem 'spicerack', :git => 'git://github.com/hashrocket/spicerack.git' # Stylesa nd JS
 gem 'turbolinks'               # Fast Page Loads
 gem 'uglifier', '>= 1.3.0'     # JS Compression
 gem 'will_paginate'            # Pagination

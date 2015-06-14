@@ -1,0 +1,22 @@
+!!!
+%html(lang="en-US" itemscope="")
+%head
+  %title The LJ Cookbook
+  = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500|Playfair+Display"
+  = stylesheet_link_tag "ui"
+  = csrf_meta_tags
+  %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+
+%body
+  %header
+    %h1 The LJ Family Cookbook
+    = notice
+    = link_to "Add a Recipe", new_recipe_path
+  %section
+    %aside
+      %ul
+        - Recipe.all.each do |recipe|
+          %li
+            = link_to recipe.title, recipe_path(recipe)
+    = yield

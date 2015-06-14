@@ -1,7 +1,7 @@
 !!!
 %html(lang="en-US" itemscope="")
 %head
-  %title LJ Wedding UI
+  %title The LJ Cookbook
   = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500|Playfair+Display"
   = stylesheet_link_tag "ui"
   = csrf_meta_tags
@@ -10,8 +10,9 @@
 
 %body
   %header
-    %h1 Family Cookbook
-    = link_to "Add a Recipe", "#"
+    %h1 The LJ Family Cookbook
+    = notice
+    = link_to "Add a Recipe", new_recipe_path
   %section
     %aside
       %ul

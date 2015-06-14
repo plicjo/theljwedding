@@ -1,5 +1,5 @@
 = simple_form_for @recipe do |f|
-  = f.error_notification
+  = render 'shared/error_messages', object: f.object
   %fieldset
     %dl
       %dt
@@ -45,20 +45,13 @@
       = f.simple_fields_for :ingredients do |i|
         = render 'ingredient_fields', :f => i
     .links
-      = link_to_add_association 'Add another ingredient', f, :ingredients, class: 'add'
+      = link_to_add_association 'Add an ingredient', f, :ingredients, class: 'add'
     %h3 Instructions
-    %dl.instructions
-      %dt
-        %label Step 1
-      %dd
-        %textarea
-        = link_to "Remove", "#", class: "remove"
-      %dt
-        %label Step 2
-      %dd
-        %textarea
-        = link_to "Remove", "#", class: "remove"
-    = link_to "Add another step", "#", class: "add"
+    #recipe-steps
+      = f.simple_fields_for :recipe_steps do |r|
+        = render 'recipe_step_fields', :f => r
+      .links
+        = link_to_add_association ' Add a step', f, :recipe_steps, class: 'add'
   %fieldset.actions
     = f.submit 'Add recipe'
 

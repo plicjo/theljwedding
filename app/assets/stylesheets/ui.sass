@@ -231,9 +231,11 @@ section
       img
         float: left
         margin: 0 3.5rem 3.5rem 0
+        max-width: 50%
         +max-width(695)
           float: none
           display: block
+          max-width: 100%
           margin: 0 auto 2rem
       blockquote
         p
@@ -286,3 +288,10 @@ section
             counter-increment: li-counter
           + li
             border-top: 1px solid lighten($gray-light, 50%)
+
+#error_explanation
+  .alert
+    font-weight: bold
+  ul
+    li
+      color: rgb(186, 71, 71)

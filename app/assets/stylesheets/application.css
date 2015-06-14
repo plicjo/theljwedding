@@ -27,6 +27,5 @@
  *= require variables
  *= require convenience
  *= require custom
- *= require_tree .
  *= require_self
  */

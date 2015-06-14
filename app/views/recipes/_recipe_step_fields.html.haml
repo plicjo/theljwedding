@@ -1,4 +1,7 @@
 .nested-fields
-  %hr
-  = f.input :step_description, placeholder: 'Ex: Scramble the eggs.'
-  = link_to_remove_association 'Remove Step', f
+  %dl.instructions
+    %dt
+      Recipe Step
+    %dd
+      = f.text_area :step_description
+      = link_to_remove_association 'Remove', f, class: 'remove'

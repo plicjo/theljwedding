@@ -5,20 +5,20 @@
 .row
   .col-sm-4
     %h4 Beef
-    %p= FoodCount.beef_total
+    %p= FoodCount.total('Beef')
   .col-sm-4
     %h4 Mahi-Mahi
-    %p= FoodCount.fish_total
+    %p= FoodCount.total('Fish')
   .col-sm-4
     %h4 Chicken
-    %p= FoodCount.chicken_total
+    %p= FoodCount.total('Chicken')
 .row
   .col-sm-4
     %h4 Veggies
-    %p= FoodCount.veggies_total
+    %p= FoodCount.total('Veggies')
   .col-sm-4
     %h4 No Food
-    %p= FoodCount.no_food_total
+    %p= FoodCount.total('None')
 %hr
 %h2 Your Guests
 %table.table.table-hover

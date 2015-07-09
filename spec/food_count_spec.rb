@@ -2,62 +2,64 @@ require 'rails_helper'
 
 describe FoodCount do
 
-  describe '.beef_total' do
-    before do
-      5.times { FactoryGirl.create(:rsvp, food_option: 'Beef') }
-      5.times { FactoryGirl.create(:additional_guest, food_option: 'Beef') }
+  describe '#total' do
+    context 'Beef' do
+      before do
+        5.times { FactoryGirl.create(:rsvp, food_option: 'Beef') }
+        5.times { FactoryGirl.create(:additional_guest, food_option: 'Beef') }
+      end
+
+      it 'returns the number of Rsvps and AdditonalGuests that want the Beef food option' do
+        expect(FoodCount.total('Beef')).to eq 10
+      end
     end
 
-    it 'returns the number of Rsvps and AdditonalGuests that want the Beef food option' do
-      expect(FoodCount.beef_total).to eq 10
-    end
-  end
+    context 'Fish' do
+      before do
+        3.times { FactoryGirl.create(:rsvp, food_option: 'Fish') }
+        2.times { FactoryGirl.create(:additional_guest, food_option: 'Fish') }
+      end
 
-  describe '.fish_total' do
-    before do
-      3.times { FactoryGirl.create(:rsvp, food_option: 'Fish') }
-      2.times { FactoryGirl.create(:additional_guest, food_option: 'Fish') }
-    end
-
-    it 'returns the number of Rsvps and AdditonalGuests that want the Fish food option' do
-      expect(FoodCount.fish_total).to eq 5
-    end
-  end
-
-  describe '.chicken_total' do
-    before do
-      1.times { FactoryGirl.create(:rsvp, food_option: 'Chicken') }
-      6.times { FactoryGirl.create(:additional_guest, food_option: 'Chicken') }
+      it 'returns the number of Rsvps and AdditonalGuests that want the Fish food option' do
+        expect(FoodCount.total('Fish')).to eq 5
+      end
     end
 
-    it 'returns the number of Rsvps and AdditonalGuests that want the Chicken food option' do
-      expect(FoodCount.chicken_total).to eq 7
-    end
-  end
+    context 'Chicken' do
+      before do
+        1.times { FactoryGirl.create(:rsvp, food_option: 'Chicken') }
+        6.times { FactoryGirl.create(:additional_guest, food_option: 'Chicken') }
+      end
 
-  describe '.veggies_total' do
-    before do
-      6.times { FactoryGirl.create(:rsvp, food_option: 'Veggies') }
-      7.times { FactoryGirl.create(:additional_guest, food_option: 'Veggies') }
-
-      2.times { FactoryGirl.create(:additional_guest, food_option: 'None') }
+      it 'returns the number of Rsvps and AdditonalGuests that want the Chicken food option' do
+        expect(FoodCount.total('Chicken')).to eq 7
+      end
     end
 
-    it 'returns the number of Rsvps and AdditonalGuests that want the Veggies food option' do
-      expect(FoodCount.veggies_total).to eq 13
+    context 'Veggies' do
+      before do
+        6.times { FactoryGirl.create(:rsvp, food_option: 'Veggies') }
+        7.times { FactoryGirl.create(:additional_guest, food_option: 'Veggies') }
+
+        2.times { FactoryGirl.create(:additional_guest, food_option: 'None') }
+      end
+
+      it 'returns the number of Rsvps and AdditonalGuests that want the Veggies food option' do
+        expect(FoodCount.total('Veggies')).to eq 13
+      end
     end
-  end
 
-  describe '.no_food_total' do
-    before do
-      9.times { FactoryGirl.create(:rsvp, food_option: 'None') }
-      8.times { FactoryGirl.create(:additional_guest, food_option: 'None') }
+    context 'No Food' do
+      before do
+        9.times { FactoryGirl.create(:rsvp, food_option: 'None') }
+        8.times { FactoryGirl.create(:additional_guest, food_option: 'None') }
 
-      2.times { FactoryGirl.create(:additional_guest, food_option: 'Veggies') }
-    end
+        2.times { FactoryGirl.create(:additional_guest, food_option: 'Veggies') }
+      end
 
-    it 'returns the number of Rsvps and AdditonalGuests that want the Veggies food option' do
-      expect(FoodCount.no_food_total).to eq 17
+      it 'returns the number of Rsvps and AdditonalGuests that want the Veggies food option' do
+        expect(FoodCount.total('None')).to eq 17
+      end
     end
   end
 end

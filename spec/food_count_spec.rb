@@ -39,10 +39,25 @@ describe FoodCount do
     before do
       6.times { FactoryGirl.create(:rsvp, food_option: 'Veggies') }
       7.times { FactoryGirl.create(:additional_guest, food_option: 'Veggies') }
+
+      2.times { FactoryGirl.create(:additional_guest, food_option: 'None') }
     end
 
     it 'returns the number of Rsvps and AdditonalGuests that want the Veggies food option' do
       expect(FoodCount.veggies_total).to eq 13
+    end
+  end
+
+  describe '.no_food_total' do
+    before do
+      9.times { FactoryGirl.create(:rsvp, food_option: 'None') }
+      8.times { FactoryGirl.create(:additional_guest, food_option: 'None') }
+
+      2.times { FactoryGirl.create(:additional_guest, food_option: 'Veggies') }
+    end
+
+    it 'returns the number of Rsvps and AdditonalGuests that want the Veggies food option' do
+      expect(FoodCount.no_food_total).to eq 17
     end
   end
 end

@@ -3,18 +3,22 @@
 %h2 Food Option Totals
 %hr
 .row
-  .col-sm-3
+  .col-sm-4
     %h4 Beef
     %p= FoodCount.beef_total
-  .col-sm-3
+  .col-sm-4
     %h4 Mahi-Mahi
     %p= FoodCount.fish_total
-  .col-sm-3
+  .col-sm-4
     %h4 Chicken
     %p= FoodCount.chicken_total
-  .col-sm-3
+.row
+  .col-sm-4
     %h4 Veggies
     %p= FoodCount.veggies_total
+  .col-sm-4
+    %h4 No Food
+    %p= FoodCount.no_food_total
 %hr
 %h2 Your Guests
 %table.table.table-hover

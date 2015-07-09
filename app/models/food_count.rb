@@ -16,4 +16,8 @@ class FoodCount
     Rsvp.Veggies.count + AdditionalGuest.Veggies.count
   end
 
+  def self.no_food_total
+    Rsvp.None.count + AdditionalGuest.None.count
+  end
+
 end

@@ -9,15 +9,13 @@ module ApplicationHelper
   end
 
   def food_options
-    food_options = Rsvp::FOOD_OPTIONS
     [
-      ['Chicken Florentine En Croute', food_options[2]],
-      ['Roasted Prime Rib of Beef',    food_options[0]],
-      ['Mahi-Mahi with a Fresh Mango Salsa or Lemon Herb Sauce', food_options[1]],
-      ['Roasted Vegetables in Puff Pastry', food_options[4]],
-      ["No food please. I'd just like to RSVP.", food_options[3]]
+      ['Chicken Florentine En Croute', 'Chicken'],
+      ['Roasted Prime Rib of Beef',    'Beef'],
+      ['Mahi-Mahi with a Fresh Mango Salsa or Lemon Herb Sauce', 'Fish'],
+      ['Roasted Vegetables in Puff Pastry', 'Veggies'],
+      ["No food please. I'd just like to RSVP.", 'None']
     ]
-
   end
 
 end

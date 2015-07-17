@@ -61,5 +61,17 @@ describe FoodCount do
         expect(FoodCount.total('None')).to eq 17
       end
     end
+
+  context 'Kids Nuggets' do
+      before do
+        10.times { FactoryGirl.create(:rsvp, food_option: 'Kids') }
+        8.times { FactoryGirl.create(:additional_guest, food_option: 'Kids') }
+      end
+
+      it 'returns the number of Rsvps and AdditonalGuests that want the Kids food option' do
+        expect(FoodCount.total('Kids')).to eq 18
+      end
+    end
+
   end
 end

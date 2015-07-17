@@ -7,6 +7,7 @@ describe FoodCount do
       before do
         5.times { FactoryGirl.create(:rsvp, food_option: 'Beef') }
         5.times { FactoryGirl.create(:additional_guest, food_option: 'Beef') }
+        1.times { FactoryGirl.create(:rsvp, food_option: 'Beef', invite_status: false) }
       end
 
       it 'returns the number of Rsvps and AdditonalGuests that want the Beef food option' do

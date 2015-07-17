@@ -74,7 +74,6 @@
       %th First Name
       %th Last Name
       %th Additional Guests
-      %th Food Option
       %th
       %th
 
@@ -85,7 +84,6 @@
         %td= guest.first_name
         %td= guest.last_name
         %td= guest.additional_guests.count
-        %td= guest.food_option
 %h2
   Not Attending Additional Guests
   = "(#{not_attending_additional_guests.count})"
@@ -94,7 +92,6 @@
     %tr
       %th First Name
       %th Last Name
-      %th Food Option
       %th
       %th
 
@@ -103,5 +100,4 @@
       %tr
         %td= additional_guest.first_name
         %td= additional_guest.last_name
-        %td= additional_guest.food_option
 

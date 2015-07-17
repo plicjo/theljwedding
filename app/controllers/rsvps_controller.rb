@@ -15,7 +15,7 @@ class RsvpsController < ApplicationController
   end
 
   def index
-    @rsvps = Rsvp.page(params[:page]).order(:last_name)
+    @rsvps = Rsvp.order(:last_name)
   end
 
   private

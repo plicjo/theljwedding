@@ -23,7 +23,9 @@
     %h4 Kids Nuggets
     %p= FoodCount.total('Kids')
 %hr
-%h2 Your Guests
+%h2
+  Your Guests
+  = "(#{attending_rsvps.count})"
 %table.table.table-hover
   %thead
     %tr
@@ -36,16 +38,17 @@
       %th
 
   %tbody
-    - @rsvps.each do |guest|
+    - attending_rsvps.each do |guest|
       %tr
         %td= guest.email
         %td= guest.first_name
         %td= guest.last_name
         %td= guest.additional_guests.count
         %td= guest.food_option
-= will_paginate @rsvps, param_name: 'page', render: BootstrapPagination::Rails
 
-%h2 RSVP Additional Guests
+%h2
+  RSVP Additional Guests
+  = "(#{attending_additional_guests.count})"
 %table.table.table-hover
   %thead
     %tr
@@ -56,10 +59,49 @@
       %th
 
   %tbody
-    - @rsvps.each do |guest|
-      - if guest.additional_guests.any?
-        - guest.additional_guests.page(params[:additonal_guests_page]).order(:last_name).each do |additional_guest|
-          %tr
-            %td= additional_guest.first_name
-            %td= additional_guest.last_name
-            %td= additional_guest.food_option
+    - attending_additional_guests.order(:last_name).each do |additional_guest|
+      %tr
+        %td= additional_guest.first_name
+        %td= additional_guest.last_name
+        %td= additional_guest.food_option
+%h2
+  Not Attending Guests
+  = "(#{not_coming_rsvps.count})"
+%table.table.table-hover
+  %thead
+    %tr
+      %th Email
+      %th First Name
+      %th Last Name
+      %th Additional Guests
+      %th Food Option
+      %th
+      %th
+
+  %tbody
+    - not_coming_rsvps.each do |guest|
+      %tr
+        %td= guest.email
+        %td= guest.first_name
+        %td= guest.last_name
+        %td= guest.additional_guests.count
+        %td= guest.food_option
+%h2
+  Not Attending Additional Guests
+  = "(#{not_attending_additional_guests.count})"
+%table.table.table-hover
+  %thead
+    %tr
+      %th First Name
+      %th Last Name
+      %th Food Option
+      %th
+      %th
+
+  %tbody
+    - not_attending_additional_guests.each do |additional_guest|
+      %tr
+        %td= additional_guest.first_name
+        %td= additional_guest.last_name
+        %td= additional_guest.food_option
+

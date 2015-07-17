@@ -8,6 +8,22 @@ module ApplicationHelper
     Recipe.page(params[:page]).order(:title)
   end
 
+  def attending_rsvps
+    @rsvps.where(invite_status: true)
+  end
+
+  def not_coming_rsvps
+    @rsvps.where(invite_status: false)
+  end
+
+  def attending_additional_guests
+    AdditionalGuest.where(invite_status: true).order(:last_name)
+  end
+
+  def not_attending_additional_guests
+    AdditionalGuest.where(invite_status: false).order(:last_name)
+  end
+
   def food_options
     [
       ['Chicken Florentine En Croute', 'Chicken'],

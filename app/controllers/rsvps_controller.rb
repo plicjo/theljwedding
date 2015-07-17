@@ -22,9 +22,9 @@ class RsvpsController < ApplicationController
 
   def rsvp_params
     params.require(:rsvp).permit(
-      :email, :first_name, :last_name, :food_option,
+      :email, :first_name, :last_name, :food_option, :invite_status,
       additional_guests_attributes: [
-        :first_name, :id, :destroy,
+        :first_name, :id, :destroy, :invite_status,
         :food_option, :last_name, :rsvp_id
       ]
     )

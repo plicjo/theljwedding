@@ -4,5 +4,6 @@
   %h3 Additional Guest
   = f.input :first_name, required: false
   = f.input :last_name, required: false
+  = f.input :invite_status, as: :radio_buttons, label: false, collection: [['Accepts your invite with pleasure', true], ['Declines with regret', false]]
   = f.input :food_option, as: :radio_buttons, collection: food_options, required: false
   = link_to_remove_association "Remove additional guest", f

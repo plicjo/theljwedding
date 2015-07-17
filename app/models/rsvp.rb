@@ -25,6 +25,7 @@ class Rsvp < ActiveRecord::Base
   validates :email, :food_option, presence: true
   validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }
   validates :food_option, inclusion: { in: FOOD_OPTIONS }
+  validates :invite_status, inclusion: { in: [true, false] , message: "Please tell us if you're coming" }
 
   def email=(value)
     super whitespace_stripper(value)

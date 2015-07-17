@@ -5,6 +5,7 @@
     = f.input :email, required: false
     = f.input :first_name, required: false
     = f.input :last_name, required: false
+    = f.input :invite_status, as: :radio_buttons, label: false, collection: [['Accepts your invite with pleasure', true], ['Declines with regret', false]], required: true
     = f.input :food_option, as: :radio_buttons, collection: food_options, required: false
   .form-actions
     #additional-guests

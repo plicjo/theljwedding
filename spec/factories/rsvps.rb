@@ -18,6 +18,7 @@ FactoryGirl.define do
     first_name "MyString"
     last_name "MyString"
     attending true
+    invite_status true
     food_option 1
   end
 

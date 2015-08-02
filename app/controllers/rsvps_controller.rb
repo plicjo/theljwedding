@@ -4,8 +4,9 @@ class RsvpsController < ApplicationController
   before_action :authenticate_user!, only: :index
 
   def new
-    @rsvp = Rsvp.new
-    respond_with(@rsvp)
+    # @rsvp = Rsvp.new
+    # respond_with(@rsvp)
+    redirect_to root_path, notice: 'We regret to inform you that the deadline to RSVP has passed.'
   end
 
   def create

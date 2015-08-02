@@ -30,6 +30,10 @@ Given(/^an rsvp exists$/) do
   @rsvp = FactoryGirl.create(:rsvp)
 end
 
+Then(/^I should get redirected to the home page$/) do
+  expect(page).to have_content 'Jordan and Lauren met at a Catholic college retreat in September of 2009.'
+end
+
 Then(/^I should see the food option counts$/) do
   expect(page).to have_content 'Food Option Totals'
   expect(page).to have_content 1 # the count for one of the rsvp options will be 1

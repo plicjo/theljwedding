@@ -1,14 +1,10 @@
 Feature: RSVP
   Guests can RSVP for themselves and their party
 
-  # @javascript
-  # Scenario: Visitor RSVPs for the wedding
-  #   Given I visit the RSVP page
-  #   When  I fill in the RSVP information
-  #   And   I add an additional guest
-  #   And   I fill in the additional guest's information
-  #   And   I click "RSVP"
-  #   Then  I should see "We've received your RSVP. Thank you! Why not check out our family cookbook or submit a recipe?"
+  Scenario: Visitor tries to RSVP for the wedding
+    Given I visit the RSVP page
+    Then  I should get redirected to the home page
+    And   I should see "We regret to inform you that the deadline to RSVP has passed."
 
   Scenario: Admin views list of RSVPs and the food option count
     Given I am logged in

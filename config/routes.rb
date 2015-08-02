@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'rsvp', to: 'rsvps#new'
-  resources :rsvps, only: [:create, :update, :index]
+  resources :rsvps, only: [:index]
   resources :recipes, only: [:new, :create, :show]
   resources :rsvp_emails, only: [:new, :create]
   devise_for :users

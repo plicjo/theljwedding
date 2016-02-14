@@ -4,7 +4,7 @@ Given(/^I am logged in$/) do
   fill_in 'user_email',    with: @user.email
   fill_in 'user_password', with: 'password'
   click_button 'Log in'
-  page.should have_content 'Signed in successfully.'
+  expect(page).to have_content 'Signed in successfully.'
 end
 
 When(/^I click "(.*?)"$/) do |text|
@@ -12,5 +12,5 @@ When(/^I click "(.*?)"$/) do |text|
 end
 
 Then(/^I should see "(.*?)"$/) do |text|
-  page.should have_content text
+  expect(page).to have_content text
 end

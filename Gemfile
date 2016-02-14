@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
-gem 'rails', ' ~> 4.2.3'
+gem 'rails', ' ~> 4.2.5.1'
 gem 'passenger'                # Web Server
 gem 'pg'                       # Postgres Database
 gem 'autoprefixer-rails'       # Autoprefix CSS styles
@@ -20,8 +20,8 @@ gem 'jquery-ui-rails'          # jQuery UI
 gem 'mini_magick'              # Image Processing
 gem 'refile', require: 'refile/rails'  # File Uploads
 gem 'refile-mini_magick'       # Integrates Refile and MiniMagick
-gem 'refile-s3'                # Upload images to S3
-gem 'responders', '~> 2.0'     # Clean controllers
+gem 'refile-s3', '0.1.0'       # Upload images to S3
+gem 'responders'               # Clean controllers
 gem 'sass-rails', '~> 5.0'     # SASS
 gem 'simple_form'              # Form generator
 gem 'spicerack', :git => 'git://github.com/hashrocket/spicerack.git' # Stylesa nd JS

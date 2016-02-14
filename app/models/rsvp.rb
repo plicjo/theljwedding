@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: rsvps
-#
-#  id          :integer          not null, primary key
-#  email       :string
-#  first_name  :string
-#  last_name   :string
-#  attending   :boolean
-#  food_option :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#
-
 class Rsvp < ActiveRecord::Base
   include ApplicationHelper
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

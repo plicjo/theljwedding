@@ -1,17 +1,3 @@
-# == Schema Information
-#
-# Table name: rsvps
-#
-#  id          :integer          not null, primary key
-#  email       :string
-#  first_name  :string
-#  last_name   :string
-#  attending   :boolean
-#  food_option :integer
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#
-
 require 'rails_helper'
 
 RSpec.describe Rsvp, type: :model do

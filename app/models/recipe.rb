@@ -1,19 +1,3 @@
-# == Schema Information
-#
-# Table name: recipes
-#
-#  id                 :integer          not null, primary key
-#  photo_id           :string
-#  title              :string
-#  family_name        :string
-#  prep_time          :string
-#  cook_time          :string
-#  number_of_servings :integer
-#  description        :text
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#
-
 class Recipe < ActiveRecord::Base
   attachment :photo, type: :image
   has_many :ingredients

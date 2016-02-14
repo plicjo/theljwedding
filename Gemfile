@@ -2,65 +2,66 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
-gem 'rails', ' ~> 4.2.5.1'
-gem 'passenger'                # Web Server
-gem 'pg'                       # Postgres Database
-gem 'autoprefixer-rails'       # Autoprefix CSS styles
-gem 'aws-sdk'                  # Connect to S3
-gem 'bourbon'                  # Bourbon
-gem 'bcrypt'                   # Encryption
-gem 'coffee-rails', '~> 4.1.0' # CoffeeScript
-gem 'cocoon'                   # Dynamic Nested Forms
-gem 'devise'                   # Authentication
-gem 'font-awesome-rails'       # Font Awesome
-gem 'haml-rails'               # HTML Preprocessor
-gem 'jquery-rails'             # jQuery
-gem 'jquery-turbolinks'        # Integrate Turbolinks with jQuery better
-gem 'jquery-ui-rails'          # jQuery UI
-gem 'mini_magick'              # Image Processing
-gem 'refile', require: 'refile/rails'  # File Uploads
-gem 'refile-mini_magick'       # Integrates Refile and MiniMagick
-gem 'refile-s3', '0.1.0'       # Upload images to S3
-gem 'responders'               # Clean controllers
-gem 'sass-rails', '~> 5.0'     # SASS
-gem 'simple_form'              # Form generator
-gem 'spicerack', :git => 'git://github.com/hashrocket/spicerack.git' # Stylesa nd JS
-gem 'turbolinks'               # Fast Page Loads
-gem 'uglifier', '>= 1.3.0'     # JS Compression
-gem 'will_paginate-bootstrap'  # Bootstrap styles for pagination
+gem 'rails', '~> 4.2.5.1'
+
+gem 'autoprefixer-rails'
+gem 'aws-sdk'
+gem 'bcrypt'
+gem 'bourbon'
+gem 'cocoon'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'devise'
+gem 'font-awesome-rails'
+gem 'haml-rails'
+gem 'jquery-rails'
+gem 'jquery-turbolinks'
+gem 'jquery-ui-rails'
+gem 'mini_magick'
+gem 'passenger'
+gem 'pg'
+gem 'refile', require: 'refile/rails'
+gem 'refile-mini_magick'
+gem 'refile-s3', '0.1.0'
+gem 'responders'
+gem 'sass-rails', '~> 5.0'
+gem 'simple_form'
+gem 'spicerack', github: 'hashrocket/spicerack'
+gem 'turbolinks'
+gem 'uglifier', '>= 1.3.0'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
-  gem 'pry'                      # Code debugger
-  gem 'spring'                   # Fast Application loading
-  gem 'faker'                    # Fake data
-  gem 'dotenv-rails'             # Environment Variables
+  gem 'dotenv-rails'
+  gem 'faker'
+  gem 'pry'
+  gem 'spring'
 end
 
 group :development do
-  gem 'better_errors'            # Better Ruby errors
+  gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug'
-  gem 'quiet_assets'             # Mute assets in Rails server
+  gem 'quiet_assets'
 end
 
 group :test do
-  gem 'capybara'                       # Simulate user
-  gem 'poltergeist'                    # Simulate browser JS
-  gem 'cucumber-rails', require: false # Acceptance tests
-  gem 'database_cleaner'               # Clean test db
-  gem 'factory_girl_rails'             # Factories for tests
-  gem 'launchy'                        # Launch browser on test failure
-  gem 'rspec-rails'                    # Functional tests
-  gem 'simplecov'                      # See test coverage
-  gem 'shoulda-matchers'               # Quick test writing
+  gem 'capybara'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'launchy'
+  gem 'poltergeist'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
   gem 'vcr'
   gem 'webmock'
 end
 
 group :production do
-  gem 'heroku-deflater' # Gzip static files
-  gem 'newrelic_rpm'    # App Monitoring
-  gem 'rails_12factor'  # Heroku plugins
+  gem 'heroku-deflater'
+  gem 'newrelic_rpm'
+  gem 'rails_12factor'
 end
 
 gem 'sdoc', '~> 0.4.0', group: :doc

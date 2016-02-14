@@ -45,12 +45,11 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara-webkit'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'launchy'
-  gem 'poltergeist'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'

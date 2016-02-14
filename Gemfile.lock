@@ -72,7 +72,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    cliver (0.3.2)
+    capybara-webkit (1.8.0)
+      capybara (>= 2.3.0, < 2.7.0)
+      json
     cocoon (1.2.7)
     coderay (1.1.0)
     coffee-rails (4.1.1)
@@ -185,11 +187,6 @@ GEM
       rack
       rake (>= 0.8.1)
     pg (0.18.4)
-    poltergeist (1.9.0)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      multi_json (~> 1.0)
-      websocket-driver (>= 0.2.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -323,9 +320,6 @@ GEM
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
-    websocket-driver (0.6.3)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.2)
     will_paginate (3.1.0)
     will_paginate-bootstrap (1.0.1)
       will_paginate (>= 3.0.3)
@@ -343,7 +337,7 @@ DEPENDENCIES
   binding_of_caller
   bourbon
   byebug
-  capybara
+  capybara-webkit
   cocoon
   coffee-rails (~> 4.1.0)
   cucumber-rails
@@ -363,7 +357,6 @@ DEPENDENCIES
   newrelic_rpm
   passenger
   pg
-  poltergeist
   pry
   quiet_assets
   rails (~> 4.2.5.1)
@@ -385,3 +378,6 @@ DEPENDENCIES
   vcr
   webmock
   will_paginate-bootstrap
+
+BUNDLED WITH
+   1.11.2

@@ -39,9 +39,12 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  require 'capybara/poltergeist'
-  Capybara.ignore_hidden_elements   = false
-  Capybara.default_driver           = :rack_test
-  Capybara.javascript_driver        = :poltergeist
-  Capybara.default_max_wait_time    = 6
+  Capybara.ignore_hidden_elements = false
+  Capybara.default_driver         = :rack_test
+  Capybara.javascript_driver      = :webkit
+  Capybara.default_max_wait_time  = 6
+
+  Capybara::Webkit.configure do |config|
+    config.block_unknown_urls
+  end
 end

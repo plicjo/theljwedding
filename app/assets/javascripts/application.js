@@ -14,7 +14,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-ui
-//= require gmaps-auto-complete
 //= require bootstrap.min
 //= require jquery.flexslider
 //= require fittext
@@ -32,7 +31,6 @@
 //= require jquery.maskedinput
 //= require input-mask
 //= require get_window_size
-//= require autocomplete
 //= require refile
 //= require file_upload
 //= require cocoon

@@ -1,8 +1,8 @@
 require "refile/s3"
 
 aws = {
-  access_key_id: "AKIAJEOEOOFHLFNJJTUA",
-  secret_access_key: "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",
+  access_key_id: ENV['AWS_ACCESS_KEY'],
+  secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
   region: "us-east-1",
   bucket: "theljwedding-all",
 }

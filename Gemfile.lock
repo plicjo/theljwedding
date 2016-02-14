@@ -230,6 +230,8 @@ GEM
     rake (10.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
+    recaptcha (1.1.0)
+      json
     refile (0.5.5)
       mime-types
       rest-client (~> 1.8)
@@ -361,6 +363,7 @@ DEPENDENCIES
   quiet_assets
   rails (~> 4.2.5.1)
   rails_12factor
+  recaptcha
   refile
   refile-mini_magick
   refile-s3 (= 0.1.0)

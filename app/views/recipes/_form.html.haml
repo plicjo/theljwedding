@@ -53,6 +53,7 @@
       .links
         = link_to_add_association ' Add a step', f, :recipe_steps, class: 'add'
   %fieldset.actions
+    = recaptcha_tags
     = f.submit 'Add recipe'
 
 

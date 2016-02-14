@@ -8,8 +8,11 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.save
-    respond_with @recipe
+    if verify_recaptcha(model: @recipe) && @recipe.save
+      redirect_to @recipe, notice: 'Recipe was successfully created.'
+    else
+      render :new
+    end
   end
 
   def show

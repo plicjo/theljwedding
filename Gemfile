@@ -29,6 +29,7 @@ gem 'spicerack', github: 'hashrocket/spicerack'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate-bootstrap'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 group :development, :test do
   gem 'dotenv-rails'

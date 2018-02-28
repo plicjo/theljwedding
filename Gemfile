@@ -35,7 +35,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'faker'
   gem 'pry'
-  gem 'spring'
 end
 
 group :development do

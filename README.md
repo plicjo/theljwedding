@@ -13,6 +13,8 @@ AWS_SECRET_ACCESS_KEY=bar
 RECAPTCHA_PRIVATE_KEY=foo
 RECAPTCHA_PUBLIC_KEY=bar
 ```
+Now, setup the Rails app
+```
 bundle install
 rake db:create
 rake db:migrate

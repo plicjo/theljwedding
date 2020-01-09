@@ -1,6 +1,6 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :rsvp_email do
-    body "MyText"
-    subject "MyString"
+    body { 'MyText' }
+    subject { 'MyString' }
   end
 end

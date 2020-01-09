@@ -1,4 +1,4 @@
-class Rsvp < ActiveRecord::Base
+class Rsvp < ApplicationRecord
   include ApplicationHelper
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   FOOD_OPTIONS = %w(Beef Fish Chicken None Veggies Kids)

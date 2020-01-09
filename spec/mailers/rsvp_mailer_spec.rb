@@ -4,8 +4,8 @@ RSpec.describe RsvpMailer, type: :mailer do
 
   describe '#mass_email' do
 
-    let(:rsvp) { FactoryGirl.create(:rsvp) }
-    let(:rsvp_email) { FactoryGirl.create(:rsvp_email, subject: 'FooSubject', body: 'DatBody') }
+    let(:rsvp) { FactoryBot.create(:rsvp) }
+    let(:rsvp_email) { FactoryBot.create(:rsvp_email, subject: 'FooSubject', body: 'DatBody') }
 
     it 'should send a lot of emails' do
       RsvpMailer.mass_email(rsvp_email, rsvp).deliver_now

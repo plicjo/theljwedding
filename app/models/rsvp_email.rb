@@ -1,3 +1,3 @@
-class RsvpEmail < ActiveRecord::Base
+class RsvpEmail < ApplicationRecord
   validates :subject, :body, presence: true
 end

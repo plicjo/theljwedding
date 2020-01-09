@@ -1,7 +1,6 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :ingredient do
-    description "MyString"
-recipe nil
+    description { "MyString" }
+    recipe { nil }
   end
-
 end

@@ -1,4 +1,4 @@
-# README #
+# README
 
 Lauren and Jordan Harirchi wedding website
 
@@ -8,8 +8,6 @@ Lauren and Jordan Harirchi wedding website
 Create a `.env` file in the root directory and fill it with the following:
 
 ```
-AWS_ACCESS_KEY=foo
-AWS_SECRET_ACCESS_KEY=bar
 RECAPTCHA_PRIVATE_KEY=foo
 RECAPTCHA_PUBLIC_KEY=bar
 ```
@@ -17,7 +15,7 @@ Now, setup the Rails app
 ```
 bundle install
 rake db:create
-rake db:migrate
+rake db:schema:load
 rake db:seed
 ```
 

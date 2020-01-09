@@ -1,4 +1,4 @@
-class AdditionalGuest < ActiveRecord::Base
+class AdditionalGuest < ApplicationRecord
   belongs_to :rsvp, dependent: :destroy
 
   enum food_option: { 'Beef': 0, 'Fish': 1, 'Chicken': 2, 'None': 3, 'Veggies': 4, 'Kids':5 }

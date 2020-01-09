@@ -14,7 +14,7 @@ end
 
 When(/^I add an additional guest$/) do
   click_link 'Add Additional Guest to Your Party'
-  page.should have_content 'Remove additional guest'
+  expect(page).to have_content 'Remove additional guest'
 end
 
 When(/^I fill in the additional guest's information$/) do
@@ -27,7 +27,7 @@ When(/^I fill in the additional guest's information$/) do
 end
 
 Given(/^an rsvp exists$/) do
-  @rsvp = FactoryGirl.create(:rsvp)
+  @rsvp = FactoryBot.create(:rsvp)
 end
 
 Then(/^I should see the food option counts$/) do

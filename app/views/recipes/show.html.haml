@@ -3,7 +3,6 @@
     = @recipe.title.titleize
     %mark= @recipe.family_name.titleize
 
-  = image_tag attachment_url(@recipe, :photo) if @recipe.photo_id
   %blockquote
     %p= @recipe.description
 

@@ -1,5 +1,5 @@
 Given(/^there are (\d+) rsvp guests$/) do |arg1|
-  300.times { FactoryGirl.create(:rsvp) } # 300 email recipients
+  300.times { FactoryBot.create(:rsvp) } # 300 email recipients
 end
 
 When(/^I fill out the email blast form$/) do

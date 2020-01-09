@@ -12,12 +12,11 @@ Rails.application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
-  # Run tests in random order
-  config.active_support.test_order = :random
-
-  # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_files  = true
-  config.static_cache_control = 'public, max-age=3600'
+  # Configure public file server for tests with Cache-Control for performance.
+  config.public_file_server.enabled = true
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, max-age=3600'
+  }
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -28,6 +27,7 @@ Rails.application.configure do
 
   # Disable request forgery protection in test environment.
   config.action_controller.allow_forgery_protection = false
+  config.action_mailer.perform_caching = false
 
   # Tell Action Mailer not to deliver emails to the real world.
   # The :test delivery method accumulates sent emails in the
@@ -41,10 +41,9 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   Capybara.ignore_hidden_elements = false
   Capybara.default_driver         = :rack_test
-  Capybara.javascript_driver      = :webkit
-  Capybara.default_max_wait_time  = 6
-
-  Capybara::Webkit.configure do |config|
-    config.block_unknown_urls
+  Capybara.register_driver :selenium do |app|
+    Capybara::Selenium::Driver.new(app, browser: :chrome)
   end
+  Capybara.javascript_driver      = :selenium
+  Capybara.default_max_wait_time  = 6
 end

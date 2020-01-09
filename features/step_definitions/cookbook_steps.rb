@@ -2,8 +2,11 @@ Given(/^I am on the homepage$/) do
   visit root_path
 end
 
+Given(/^I am on the new recipe page$/) do
+  visit new_recipe_path
+end
+
 When(/^I fill out a valid recipe$/) do
-  attach_file 'recipe_photo', 'spec/support/photo.jpg'
   fill_in 'recipe_title', with: 'Darkhorse Pie'
   fill_in 'recipe_family_name', with: 'Olsen Family'
 
@@ -26,10 +29,8 @@ When(/^I fill out a valid recipe$/) do
 end
 
 Then(/^I should see that the recipe has been created$/) do
-  VCR.use_cassette 'amazon_s3', allow_playback_repeats:true, record: :new_episodes do
-    expect(page).to have_content 'Serves'
-    expect(page).to have_content 'Recipe was successfully created.'
-  end
+  expect(page).to have_content 'Serves'
+  expect(page).to have_content 'Recipe was successfully created.'
 end
 
 Then(/^I should see a list of recipes$/) do

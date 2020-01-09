@@ -30,16 +30,6 @@
           %label Servings (optional)
         %dd
           = f.text_field :number_of_servings
-    %dl
-      %dt
-        %label Photo of dish (optional)
-      %dd
-        = f.attachment_field :photo, direct: true
-        = f.error :photo, id: 'photo-errors'
-        #progress.progress.fade.top-10px
-          .progress-bar.progress-striped
-        #photo
-        = image_tag attachment_url(@recipe, :photo, :fill, 300, 300) if @recipe.photo_id?
     %h3 Ingredients
     #ingredients
       = f.simple_fields_for :ingredients do |i|

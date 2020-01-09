@@ -1,3 +1,3 @@
-class RecipeStep < ActiveRecord::Base
+class RecipeStep < ApplicationRecord
   belongs_to :recipe
 end

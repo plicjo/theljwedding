@@ -8,8 +8,8 @@ Lauren and Jordan Harirchi wedding website
 Create a `.env` file in the root directory and fill it with the following:
 
 ```
-RECAPTCHA_PRIVATE_KEY=foo
-RECAPTCHA_PUBLIC_KEY=bar
+RECAPTCHA_SITE_KEY=foo
+RECAPTCHA_SECRET_KEY=bar
 ```
 Now, setup the Rails app
 ```

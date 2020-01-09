@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.4.0'
+ruby '2.6.4'
 
-gem 'rails', '5.0.7.2'
+gem 'rails', '5.1.7'
 
 gem 'autoprefixer-rails'
 gem 'bcrypt'
 gem 'bourbon'
-gem 'bundler', '< 2.0'
 gem 'cocoon'
 gem 'devise'
 gem 'font-awesome-rails'
@@ -15,7 +14,6 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'jquery-ui-rails'
-gem 'json', '>= 1.8'
 gem 'mini_magick'
 gem 'pg'
 gem 'puma'
@@ -37,6 +35,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug'
+  gem 'listen'
 end
 
 group :test do

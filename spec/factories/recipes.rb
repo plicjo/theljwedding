@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :recipe do
-  photo_id "MyString"
   title "MyString"
   family_name "MyString"
   prep_time "MyString"

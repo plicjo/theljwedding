@@ -31,7 +31,5 @@
 //= require jquery.maskedinput
 //= require input-mask
 //= require get_window_size
-//= require refile
-//= require file_upload
 //= require cocoon
 //= require turbolinks

@@ -18,7 +18,7 @@ describe FoodCount do
     context 'Fish' do
       before do
         3.times { FactoryBot.create(:rsvp, food_option: 'Fish') }
-        2.times { FactoryBot.create(:additional_guest, food_option: 'Fish') }
+        2.times { FactoryBot.create(:additional_guest, food_option: 'Fish', rsvp: Rsvp.last) }
       end
 
       it 'returns the number of Rsvps and AdditonalGuests that want the Fish food option' do

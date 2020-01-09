@@ -41,10 +41,11 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   Capybara.ignore_hidden_elements = false
   Capybara.default_driver         = :rack_test
-  Capybara.javascript_driver      = :webkit
-  Capybara.default_max_wait_time  = 6
 
-  Capybara::Webkit.configure do |config|
-    config.block_unknown_urls
+  Capybara.register_driver :selenium do |app|
+    Capybara::Selenium::Driver.new(app, browser: :chrome)
   end
+
+  Capybara.javascript_driver      = :selenium
+  Capybara.default_max_wait_time  = 6
 end

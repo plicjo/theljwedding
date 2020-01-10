@@ -1,4 +1,4 @@
-class CreateAdditionalGuests < ActiveRecord::Migration
+class CreateAdditionalGuests < ActiveRecord::Migration[6.0]
   def change
     create_table :additional_guests do |t|
       t.string :first_name

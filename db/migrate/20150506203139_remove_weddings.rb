@@ -1,4 +1,4 @@
-class RemoveWeddings < ActiveRecord::Migration
+class RemoveWeddings < ActiveRecord::Migration[6.0]
   def change
     drop_table :weddings
   end

@@ -1,4 +1,4 @@
-class CreateRsvps < ActiveRecord::Migration
+class CreateRsvps < ActiveRecord::Migration[6.0]
   def change
     create_table :rsvps do |t|
       t.string :email,          unique: true

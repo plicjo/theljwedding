@@ -40,7 +40,7 @@
   %tbody
     - attending_rsvps.each do |guest|
       %tr
-        %td= guest.email
+        %td= mask_email(guest.email)
         %td= guest.first_name
         %td= guest.last_name
         %td= guest.additional_guests.count
@@ -80,7 +80,7 @@
   %tbody
     - not_coming_rsvps.each do |guest|
       %tr
-        %td= guest.email
+        %td= mask_email(guest.email)
         %td= guest.first_name
         %td= guest.last_name
         %td= guest.additional_guests.count

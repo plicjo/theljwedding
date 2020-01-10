@@ -1,4 +1,7 @@
 module ApplicationHelper
+  def mask_email(email)
+    email.sub(/^.*(?=@)/, '***')
+  end
 
   def whitespace_stripper(value)
     value.nil? ? value : value.squish

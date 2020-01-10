@@ -27,6 +27,7 @@ gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'dotenv-rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry'
 end
@@ -42,7 +43,6 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'factory_bot_rails'
   gem 'launchy'
   gem 'rspec-rails'
   gem 'shoulda-matchers'

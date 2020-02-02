@@ -1,3 +1,5 @@
+include ApplicationHelper
+
 Given(/^I visit the RSVP page$/) do
   visit rsvp_path
 end
@@ -37,5 +39,5 @@ Then(/^I should see the food option counts$/) do
 end
 
 Then(/^I should see info the for RSVP$/) do
-  expect(page).to have_content @rsvp.email
+  expect(page).to have_content mask_email(@rsvp.email)
 end

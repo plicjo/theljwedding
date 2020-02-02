@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@rails/webpacker": "4.2.2",
+    "axios": "^0.19.2",
+    "svelte": "^3.18.1",
+    "svelte-loader": "^2.13.6"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.2"
+  }
+}

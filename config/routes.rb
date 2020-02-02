@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   end
 
   get 'admin/dashboard', as: :dashboard
+  get '/svelte', to: 'svelte#index'
   root 'home#index'
 end

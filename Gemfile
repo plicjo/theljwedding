@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.3'
+ruby '2.7.0'
 
 gem 'autoprefixer-rails'
 gem 'bcrypt'
@@ -16,7 +16,7 @@ gem 'jquery-ui-rails'
 gem 'mini_magick'
 gem 'pg'
 gem 'puma'
-gem 'rails', '6.0.2.1'
+gem 'rails', '6.0.2.rc2'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'responders'
 gem 'sass-rails', '~> 5.0'

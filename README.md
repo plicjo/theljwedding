@@ -5,12 +5,12 @@ Lauren and Jordan Harirchi wedding website
 [http://the-lj-wedding.herokuapp.com/](http://the-lj-wedding.herokuapp.com/)
 
 ## Setup
-Create a `.env` file in the root directory and fill it with the following:
+Copy the example environment variables to your own  `.env` file in the root directory.
 
 ```
-RECAPTCHA_SITE_KEY=foo
-RECAPTCHA_SECRET_KEY=bar
+cp .env.example .env
 ```
+
 Now, setup the Rails app
 ```
 bundle install
